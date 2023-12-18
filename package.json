@@ -9,16 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.6.1",
+    "@fontsource/inter": "^5.0.16",
+    "@fontsource/poppins": "^5.0.8",
+    "apollo": "^2.34.0",
+    "axios": "^1.6.2",
+    "ethers": "^6.9.0",
+    "ethers-utils": "^2.1.11",
+    "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "recoil": "^0.7.7"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tanstack/eslint-plugin-query": "^4.29.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "14.0.4",
+    "eslint-plugin-prettier": "^5.0.1",
+    "typescript": "^5"
   }
 }
