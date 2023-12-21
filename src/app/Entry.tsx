@@ -5,6 +5,8 @@ import { Center, Flex, useMediaQuery } from "@chakra-ui/react";
 // import useConnectedNetwork from "@/hooks/network";
 // import { apolloClient } from "@/apollo";
 import TokamakGNB from '../components/Header';
+import '@fontsource/inter';
+
 export default function Entry({ children }: { children: React.ReactNode }) {
   // const [isMobile] = useMediaQuery("(max-width: 1200px)");
 
@@ -23,6 +25,7 @@ export default function Entry({ children }: { children: React.ReactNode }) {
       alignItems={'center'} 
       flexDir={'column'}
       bgColor={'#fff'}
+      fontFamily={'Inter, sans-serif'}
     >
       <TokamakGNB />
       <Center> {children} </Center>

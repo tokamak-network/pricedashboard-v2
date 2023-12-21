@@ -2,7 +2,7 @@ import { Flex, Text } from "@chakra-ui/react"
 import Image from "next/image";
 import TON_LOGO from '@/assets/ton-logo.svg'
 import TOS_LOGO from '@/assets/tos-logo.svg'
-import '@fontsource/inter';
+import '@fontsource/poppins';
 
 function TopContent (props: {
   krw: string | number,
@@ -18,7 +18,6 @@ function TopContent (props: {
       mb={'18px'}
       justifyContent={'space-between'}
       alignItems={'center'}
-      fontFamily={'Inter, sans-serif'}
       fontSize={'24px'}
       fontWeight={600}
       color={'#333'}
@@ -28,7 +27,7 @@ function TopContent (props: {
     >
       <Flex flexDir={'row'} h={'72px'} alignItems={'center'} ml={'27px'}>
         <Image src={type === 'ton' ? TON_LOGO : TOS_LOGO} alt={""} />
-        <Flex ml={'18px'}>
+        <Flex ml={'18px'} fontFamily={'Poppins, sans-serif'}>
           {type === 'ton' ? 'TON Price' : 'TOS Price'}
         </Flex>
       </Flex>

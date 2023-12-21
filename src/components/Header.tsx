@@ -1,5 +1,4 @@
 import {Flex, Link, Text, useTheme} from '@chakra-ui/react';
-import '@fontsource/inter';
 import BANNER from '@/assets/banner.png'
 import Image from "next/image";
 
@@ -14,7 +13,6 @@ function TokamakGNB() {
         cursor={'pointer'}
         bg={props.activetab ? '#FFFFFF' : '#FFFFFF'}
         color={props.activetab ? '#353C48' : ''}
-        fontFamily={'Inter, sans-serif'}
         // target={props.title === 'Bridge & Swap' ? '_blank' : '_self'}
         // fontWeight="bold"
         {...props}

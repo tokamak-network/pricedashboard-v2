@@ -1,7 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react"
 import Image from "next/image";
 import QUSETION_IMAGE from '@/assets/Question.svg'
-import '@fontsource/inter';
 
 function TopContent (props: {
   content: string,
@@ -16,9 +15,8 @@ function TopContent (props: {
       flexDir={'row'}
       w={'396px'}
       h={'16px'}
-      mb={'18px'}
+      mb={'14px'}
       justifyContent={'space-between'}
-      fontFamily={'Inter, sans-serif'}
       fontSize={'14px'}
     >
       <Flex

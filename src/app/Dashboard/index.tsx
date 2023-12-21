@@ -2,7 +2,7 @@ import { Flex } from "@chakra-ui/layout";
 import { useState } from "react";
 import Price from "../Price";
 import Supply from "../Supply";
-import '@fontsource/inter';
+
 
 export default function Dashboard () {
   const [selected, setSelected] = useState('price');
@@ -19,7 +19,6 @@ export default function Dashboard () {
         flexDir={'row'}
         fontSize={'36px'}
         fontWeight={700}
-        fontFamily={'Inter, sans-serif'}
         justifyContent={'start'}
         alignItems={'center'}
         bgColor={'#fff'}

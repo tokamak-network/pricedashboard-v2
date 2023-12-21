@@ -7,8 +7,8 @@ function Burnt () {
   return (
     <Flex
       flexDir={'column'}
-      h={'260px'}
-      justifyContent={'space-between'}
+      h={'250px'}
+      // justifyContent={'space-between'}
       // alignItems={'space-between'}
     >
       <Flex flexDir={'column'}>
@@ -43,7 +43,7 @@ function Burnt () {
           link={''}
         />
       </Flex>
-      <Flex fontSize={'13px'} fontWeight={300} w={'396px'} mb="20px">
+      <Flex fontSize={'13px'} fontWeight={300} w={'396px'} mb="15px">
         † Contract values need to be divided by 10^27 to get correct decimal place.
       </Flex>
       <Flex fontSize={'13px'} fontWeight={300} w={'396px'} mb="23px">

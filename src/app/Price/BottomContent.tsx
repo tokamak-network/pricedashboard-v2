@@ -1,4 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
+import '@fontsource/poppins';
 
 function BottomContent (props: { 
   title: string,
@@ -21,7 +22,11 @@ function BottomContent (props: {
       fontWeight={600}
       fontSize={'14px'}
     >
-      <Flex flexDir={'row'} ml={'20px'} >
+      <Flex 
+        flexDir={'row'} 
+        ml={'20px'} 
+        fontFamily={'Poppins, sans-serif'}
+      >
         <Text>{title}</Text>
       </Flex>
       <Flex

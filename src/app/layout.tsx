@@ -1,7 +1,6 @@
 "use client";
 
 import { RecoilRoot } from "recoil";
-
 import Entry from "./Entry";
 
 const HeadMeta = () => {
