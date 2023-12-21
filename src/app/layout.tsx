@@ -4,7 +4,7 @@ import { RecoilRoot } from "recoil";
 
 import Entry from "./Entry";
 
-export const HeadMeta = () => {
+const HeadMeta = () => {
   return (
     <head>
       <title>Tokamak Price Dashboard</title>
@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <GoogleAnalyticsScript /> */}
-      {/* <HeadMeta /> */}
+      <HeadMeta />
       <body style={{ maxHeight: "100vh", margin: 0, padding: 0 }}>
         <RecoilRoot>
           <Entry children={children} />
