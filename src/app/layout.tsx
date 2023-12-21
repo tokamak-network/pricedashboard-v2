@@ -1,16 +1,8 @@
 "use client";
 
-// import { ChakraProvidersForNextJs } from "@/providers/chakraProvider";
-// import { WagmiProviders } from "@/providers/wagmiProvider";
 import { RecoilRoot } from "recoil";
-// import Header from "@/components/header/Index";
 
-// import "css/scrollbar.css";
-
-// import { QueryClientProvider } from "@tanstack/react-query";
-// import { getQueryClient } from "@/client/queryClient";
 import Entry from "./Entry";
-import Script from "next/script";
 
 export const HeadMeta = () => {
   return (
@@ -63,22 +55,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <GoogleAnalyticsScript /> */}
-      <HeadMeta />
+      {/* <HeadMeta /> */}
       <body style={{ maxHeight: "100vh", margin: 0, padding: 0 }}>
         <RecoilRoot>
-          {/* <QueryClientProvider client={queryClient}> */}
-            {/* <ChakraProvidersForNextJs> */}
-              {/* <WagmiProviders> */}
-                <Entry children={children} />
-                {/* <AccountHistory /> */}
-                {/* <Header />
-                  <Center h={"100vh"}>{children}</Center>
-                  <GlobalComponents />
-                  <Modals /> */}
-                  {/* <Drawers/> */}
-              {/* </WagmiProviders> */}
-            {/* </ChakraProvidersForNextJs> */}
-          {/* </QueryClientProvider> */}
+          <Entry children={children} />
         </RecoilRoot>
       </body>
     </html>

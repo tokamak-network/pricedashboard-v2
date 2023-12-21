@@ -43,8 +43,11 @@ function Burnt () {
           link={''}
         />
       </Flex>
-      <Flex fontSize={'13px'} fontWeight={300} w={'396px'} mb="26px">
-        Contract values need to be divided by 10^18 to get correct decimal place.
+      <Flex fontSize={'13px'} fontWeight={300} w={'396px'} mb="20px">
+        † Contract values for TON supply need to be divided by 10^27 to get correct decimal place. 
+      </Flex>
+      <Flex fontSize={'13px'} fontWeight={300} w={'396px'} mb="23px">
+        †† Contract values need to be divided by 10^18 to get correct decimal place.
       </Flex>
     </Flex>
   )

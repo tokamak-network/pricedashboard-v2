@@ -44,7 +44,7 @@ function TopContent (props: {
           maximumFractionDigits: 2,
           minimumFractionDigits: 2
         }) : '0.00'}
-        {type ? <Text fontWeight={200} ml={'3px'}>USD</Text> : ''}
+        {!type ? <Text ml={'3px'}>TON</Text> : ''}
       </Flex>
 
     </Flex>

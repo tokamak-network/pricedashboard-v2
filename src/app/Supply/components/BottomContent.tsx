@@ -19,12 +19,18 @@ function BottomContent (props: {
       <Flex flexDir={'row'} fontSize={'20px'} fontWeight={600} h={'30px'}>
         <Text>{title}</Text>
       </Flex>
-      <Text fontSize={'14px'} fontWeight={600} fontFamily={'Inter'} h={'14px'}>
-        {value ? value.toLocaleString(undefined, {maximumFractionDigits:2}) : ''}
-      </Text>
-      <Text fontSize={'14px'} fontWeight={300} h={'14px'} mt={'16px'}>
+      <Flex 
+        fontSize={'14px'} 
+        fontWeight={600} 
+        fontFamily={'Inter'} 
+        h={'14px'} 
+        my={'15px'}
+      >
+        {value ? value.toLocaleString(undefined, {maximumFractionDigits:2}) : ''} TON
+      </Flex>
+      <Flex fontSize={'14px'} fontWeight={300} h={'14px'} mb={'25px'}>
         ${dollor ? dollor.toLocaleString(undefined, {maximumFractionDigits:2}) : ''} USD
-      </Text>
+      </Flex>
     </Flex>
   )
 }

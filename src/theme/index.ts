@@ -18,8 +18,6 @@ const PAGE_LAYOUT_STYLE = {
   })
 }
 
-
-
 const theme = extendTheme({
   components: {
     PAGE_LAYOUT_STYLE,
@@ -30,7 +28,7 @@ const theme = extendTheme({
   styles: {
     global: () => ({
       'html, body': {
-        backgroundColor: '#F7F8FD',
+        backgroundColor: '#fff',
         // props.colorMode === 'light' ? 'white.100' : 'black.100',
         fontFamily: fonts.Poppins,
         color: '#333',

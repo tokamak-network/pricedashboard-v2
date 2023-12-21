@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^2.6.1",
     "@fontsource/inter": "^5.0.16",
     "@fontsource/poppins": "^5.0.8",
+    "@fontsource/titillium-web": "^5.0.18",
     "apollo": "^2.34.0",
     "axios": "^1.6.2",
     "ethers": "^6.9.0",

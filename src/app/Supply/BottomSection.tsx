@@ -6,7 +6,7 @@ import { useTONPrice } from '../../hooks/useTONPrice';
 
 function BottomSection () {
   const {circul} = useSupply()
-  const { tonPrice } = useTONPrice()
+  const { tonPriceUSD } = useTONPrice()
   //@ts-ignore
   const { C1, C2, C3 } = circul
   return (
@@ -33,19 +33,19 @@ function BottomSection () {
           title={'C1'}
           tooltip={''}
           value={C1}
-          dollor={C1*tonPrice}
+          dollor={C1*tonPriceUSD}
         />
         <BottomContent
           title={'C2'}
           tooltip={''}
           value={C1 + C2}
-          dollor={(C1 + C2) * tonPrice}
+          dollor={(C1 + C2) * tonPriceUSD}
         />
         <BottomContent
           title={'C3'}
           tooltip={''}
           value={C1 + C2 + C3}
-          dollor={(C1 + C2 + C3) * tonPrice}
+          dollor={(C1 + C2 + C3) * tonPriceUSD}
         />
       </Flex>
     </Flex>

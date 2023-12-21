@@ -2,15 +2,17 @@ import { getTONPrice, getUSDInfo } from '@/api';
 import { useState, useEffect } from 'react';
 
 export function useTONPrice () {
-  const [tonPrice, setTonPrice] = useState(0)
+  const [tonPriceUSD, setTonPriceUSD] = useState(0)
+  const [tonPriceKRW, setTonPriceKRW] = useState(0)
   useEffect(() => {
     async function fetch () {
       const tonKRW = await getTONPrice()
       const krwUSD = await getUSDInfo()
       const tonUSD = tonKRW * krwUSD
-      setTonPrice(tonUSD)
+      setTonPriceKRW(tonKRW)
+      setTonPriceUSD(tonUSD)
     }
     fetch()
   }, [])
-  return { tonPrice }
+  return { tonPriceUSD, tonPriceKRW }
 }

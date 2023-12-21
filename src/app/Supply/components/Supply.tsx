@@ -5,8 +5,8 @@ import { useTONPrice } from '../../../hooks/useTONPrice';
 
 function Supply () {
   const {totSupply, circulSupply, circul} = useSupply();
-  const { tonPrice } = useTONPrice();
-  console.log(tonPrice)
+  const { tonPriceUSD } = useTONPrice();
+  // console.log(tonPrice)
   //@ts-ignore
   const { totalCirculationSupply } = circul
   return (
@@ -37,14 +37,14 @@ function Supply () {
         <TopContent 
           content={'Market Cap'}
           tooltip={''}
-          value={+circulSupply * tonPrice}
+          value={+circulSupply * tonPriceUSD}
           link={''}
           type={'usd'}
         />
         <TopContent 
           content={'FDV'}
           tooltip={''}
-          value={+totSupply * tonPrice}
+          value={+totSupply * tonPriceUSD}
           link={''}
           type={'usd'}
         />
@@ -55,9 +55,6 @@ function Supply () {
           link={''}
           type={'usd'}
         />
-      </Flex>
-      <Flex fontSize={'13px'} fontWeight={300} w={'396px'} mb="26px">
-        *Contract values for TON supply need to be divided by 10^27 to get correct decimal place.
       </Flex>
     </Flex>
   )

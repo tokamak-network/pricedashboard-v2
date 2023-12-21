@@ -4,7 +4,7 @@ function SectionTitle (props: { title: string }) {
   const { title } = props
   return (
     <Flex
-      minW={'100%'}
+      // minW={'100%'}
       fontSize={'20px'}
       fontFamily={'Poppins'}
       fontStyle={'normal'}
