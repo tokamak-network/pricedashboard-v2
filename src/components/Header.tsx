@@ -12,7 +12,6 @@ function TokamakGNB() {
         textAlign={'center'}
         cursor={'pointer'}
         bg={props.activetab ? '#FFFFFF' : '#FFFFFF'}
-        color={props.activetab ? '#353C48' : ''}
         // target={props.title === 'Bridge & Swap' ? '_blank' : '_self'}
         // fontWeight="bold"
         {...props}
@@ -27,6 +26,7 @@ function TokamakGNB() {
           }}
           textDecor={'none'}
           href={props.url}
+          color={'#1c1c1c'}
         >
           {props.title}
         </Link>

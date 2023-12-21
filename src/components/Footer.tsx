@@ -126,6 +126,7 @@ export default function Footer() {
                       <Content 
                         title={content.title}
                         link={content.link}
+                        span={content.span}
                       />
                     )
                   }) : ''
@@ -165,7 +166,7 @@ function Title (props: {title: string}) {
 }
 
 function Content (props: { title: string, link: string, span?: string }) {
-  if(props.title==='Tokamak')console.log(props)
+
   return (
     <Link
       href={props.link}
@@ -185,7 +186,6 @@ function Content (props: { title: string, link: string, span?: string }) {
               verticalAlign: 'super',
               display: 'inline-block',
               fontSize: 'smaller',
-              marginLeft: '-2px'
             }}
           >
             {props.span}
