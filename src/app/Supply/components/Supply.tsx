@@ -2,6 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import TopContent from './TopContent';
 import { useSupply } from '../../../hooks/useSupply';
 import { useTONPrice } from '../../../hooks/useTONPrice';
+import Link from "next/link";
 
 function Supply () {
   const {totSupply, circulSupply, circul} = useSupply();
