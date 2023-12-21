@@ -1,6 +1,9 @@
 import { Flex, Text } from "@chakra-ui/react"
 import Image from "next/image";
 import QUSETION_IMAGE from '@/assets/Question.svg'
+import LINK_ICON from '@/assets/foreign.svg'
+import Link from "next/link";
+import BasicTooltip from "@/components/Tooltip";
 
 function TopContent (props: {
   content: string,
@@ -31,7 +34,10 @@ function TopContent (props: {
           {content}
         </Text>
         <Flex>
-          <Image src={QUSETION_IMAGE} alt={'alt'} />
+          <BasicTooltip 
+            label={tooltip}
+          />
+          {/* <Image src={QUSETION_IMAGE} alt={'alt'} /> */}
         </Flex>
       </Flex>
       <Flex
@@ -44,6 +50,18 @@ function TopContent (props: {
           minimumFractionDigits: 2
         }) : '0.00'}
         {!type ? <Text ml={'3px'}>TON</Text> : ''}
+        {
+          link ? (
+            <Flex ml={'4px'}>
+              <Link 
+                href={link}
+                rel="noopener noreferrer" target="_blank"
+              >
+                <Image src={LINK_ICON} alt="" />
+              </Link>
+            </Flex>
+          ) : ''
+        }
       </Flex>
 
     </Flex>

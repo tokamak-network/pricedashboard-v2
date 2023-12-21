@@ -19,19 +19,19 @@ function Supply () {
       <Flex flexDir={'column'}>
         <TopContent 
           content={'Total Supply*'}
-          tooltip={''}
+          tooltip={'The cumulative TON generated until the present Ethereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment (Calculation Sheet). Each block produces 3.92 TON as seigniorage.'}
           value={totSupply}
-          link={''}
+          link={'https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract'}
         />
         <TopContent 
           content={'Circulating Supply'}
-          tooltip={''}
+          tooltip={'The amount of circulating TON derived using the formula : TON Circulating Supply = TON Total Supply - TON locked in vesting- TON locked in DAO Vault - TON Staked '}
           value={circulSupply}
           link={''}
         />
         <TopContent 
           content={'Circulating Supply (Upbit Standard)'}
-          tooltip={''}
+          tooltip={'Circulating supply calculated based on upbit standard to the date. '}
           value={totalCirculationSupply}
           link={''}
         />
@@ -51,7 +51,7 @@ function Supply () {
         />
         <TopContent 
           content={'Uniswap TVL'}
-          tooltip={''}
+          tooltip={'Pools considered for the calculation:  doc-tos, tos-eth, eth-wton, tos-wton, tos-aura, doc-eth, tos-lyda'}
           value={''}
           link={''}
           type={'usd'}

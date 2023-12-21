@@ -28,6 +28,7 @@ export default function Supply () {
       <Flex mt={'40px'} alignItems={'center'}>
         <Link 
           outline={'#007AFF'}
+          rel="noopener noreferrer" target="_blank"
           href={'https://docs.google.com/spreadsheets/d/1-4dT3nS4q7RwLgGI6rQ7M1hPx9XHI-Ryw1rkBCvTdcs/edit#gid=681869004'}
         >
           TON Token Supply/Vesting/Unlock Sheet
