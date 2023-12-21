@@ -46,7 +46,7 @@ export async function getStakedData() {
 
 export async function getTONPrice() {
   const res = await axios.get('https://api.upbit.com/v1/ticker?markets=KRW-TON')
-  return res.data[0].trade_price
+  return res.data[0]
 }
 
 export async function getUSDInfo() {

@@ -1,4 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
+import '@fontsource/inter';
 
 function BottomContent (props: { 
   title: string,
@@ -22,7 +23,7 @@ function BottomContent (props: {
       <Flex 
         fontSize={'14px'} 
         fontWeight={600} 
-        fontFamily={'Inter'} 
+        fontFamily={'Inter, sans-serif'} 
         h={'14px'} 
         my={'15px'}
       >

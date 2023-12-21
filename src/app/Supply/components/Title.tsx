@@ -1,4 +1,5 @@
 import { Flex } from "@chakra-ui/react";
+import '@fontsource/poppins';
 
 function SectionTitle (props: { title: string }) {
   const { title } = props
@@ -6,7 +7,7 @@ function SectionTitle (props: { title: string }) {
     <Flex
       // minW={'100%'}
       fontSize={'20px'}
-      fontFamily={'Poppins'}
+      fontFamily={'Poppins, sans-serif'}
       fontStyle={'normal'}
       fontWeight={600}
       alignItems={'center'}

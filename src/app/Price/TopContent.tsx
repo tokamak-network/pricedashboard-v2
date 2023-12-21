@@ -2,6 +2,7 @@ import { Flex, Text } from "@chakra-ui/react"
 import Image from "next/image";
 import TON_LOGO from '@/assets/ton-logo.svg'
 import TOS_LOGO from '@/assets/tos-logo.svg'
+import '@fontsource/inter';
 
 function TopContent (props: {
   krw: string | number,
@@ -17,7 +18,7 @@ function TopContent (props: {
       mb={'18px'}
       justifyContent={'space-between'}
       alignItems={'center'}
-      fontFamily={'Inter'}
+      fontFamily={'Inter, sans-serif'}
       fontSize={'24px'}
       fontWeight={600}
       color={'#333'}
@@ -33,7 +34,7 @@ function TopContent (props: {
       </Flex>
       <Flex flexDir={'column'} alignItems={'end'} mr={'27px'}>
         <Flex>
-          {krw.toLocaleString(undefined, {maximumFractionDigits:2})} KRW
+          {krw.toLocaleString(undefined, {maximumFractionDigits:0})} KRW
         </Flex>
         <Flex
           fontSize={'18px'}

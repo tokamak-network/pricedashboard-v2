@@ -2,6 +2,7 @@ import { Flex } from "@chakra-ui/layout";
 import { useState } from "react";
 import Price from "../Price";
 import Supply from "../Supply";
+import '@fontsource/inter';
 
 export default function Dashboard () {
   const [selected, setSelected] = useState('price');
@@ -18,7 +19,7 @@ export default function Dashboard () {
         flexDir={'row'}
         fontSize={'36px'}
         fontWeight={700}
-        fontFamily={'Inter'}
+        fontFamily={'Inter, sans-serif'}
         justifyContent={'start'}
         alignItems={'center'}
         bgColor={'#fff'}
@@ -52,15 +53,25 @@ export default function Dashboard () {
         // maxW={'920px'} 
         w={'100%'}
         h={'880px'} 
-        alignItems={'start'}
-        justifyContent={'center'}
+        alignItems={'center'}
+        justifyContent={'start'}
+        flexDir={'column'}
       >
         {
           selected === 'price' ?
           <Price /> :
           <Supply />
         }
+        <Flex mt={'124px'} flexDir={'row'} fontSize={'20px'}>
+          <Flex fontWeight={300} mr={'5px'}>
+            Dune Dashboard:
+          </Flex>
+          <Flex fontWeight={600}>
+            Coming Soon !!
+          </Flex>
+        </Flex>
       </Flex>
+      
     </Flex>
   )
 }

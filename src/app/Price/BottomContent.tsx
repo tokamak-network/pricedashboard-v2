@@ -33,12 +33,12 @@ function BottomContent (props: {
         <Flex
           fontSize={'18px'}
         >
-          {krw} KRW
+          {krw.toLocaleString(undefined, {maximumFractionDigits: 0})} KRW
         </Flex>
         <Flex
           fontWeight={300}
         >
-          (${usd} USD)
+          (${usd.toLocaleString(undefined, {maximumFractionDigits: 2})} USD)
         </Flex>
       </Flex>
     </Flex>

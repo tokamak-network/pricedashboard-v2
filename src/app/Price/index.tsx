@@ -1,12 +1,14 @@
 import { Flex } from "@chakra-ui/layout";
-import { useSupply } from '../../hooks/useSupply';
 import TopContent from "./TopContent";
 import { useTONPrice } from '../../hooks/useTONPrice';
 import BottomContent from "./BottomContent";
+import { useTOSPrice } from '../../hooks/useTOSPrice';
+import { useTONTradeInfo } from '../../hooks/useTONTradeInfo';
 
 export default function Price () {
-  // const data = useSupply(); 
-  const {tonPriceKRW, tonPriceUSD} = useTONPrice();
+  const { tonPriceKRW, tonPriceUSD } = useTONPrice();
+  const { tosPriceKRW, tosPriceUSD } = useTOSPrice()
+  const { highPrice, lowPrice, openingPrice, closingPrice, USD } = useTONTradeInfo();
  
   return (
     <Flex flexDir={'column'} maxW={'920px'} justifyContent={'center'} alignItems={'center'}>
@@ -17,40 +19,32 @@ export default function Price () {
           type={'ton'}
         />
         <TopContent 
-          krw={''}
-          usd={''}
+          krw={tosPriceKRW}
+          usd={tosPriceUSD}
           type={'tos'}
         />
       </Flex>
       <Flex flexDir={'row'} justifyContent={'space-between'} minW={'920px'}>
         <BottomContent 
           title={'OPENING PRICE'}
-          krw={0}
-          usd={0}
+          krw={openingPrice}
+          usd={openingPrice * USD}
         />
         <BottomContent 
           title={'CLOSING PRICE'}
-          krw={0}
-          usd={0}
+          krw={closingPrice}
+          usd={closingPrice * USD}
         />
         <BottomContent 
           title={'HIGH PRICE'}
-          krw={0}
-          usd={0}
+          krw={highPrice}
+          usd={highPrice * USD}
         />
         <BottomContent 
           title={'LOW PRICE'}
-          krw={0}
-          usd={0}
+          krw={lowPrice}
+          usd={lowPrice * USD}
         />
-      </Flex>
-      <Flex mt={'124px'} flexDir={'row'} fontSize={'20px'}>
-        <Flex fontWeight={300} mr={'5px'}>
-          Dune Dashboard:
-        </Flex>
-        <Flex fontWeight={600}>
-          Coming Soon !!
-        </Flex>
       </Flex>
     </Flex>
   )
