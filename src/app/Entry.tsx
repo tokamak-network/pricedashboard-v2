@@ -6,6 +6,7 @@ import { Center, Flex, useMediaQuery } from "@chakra-ui/react";
 // import { apolloClient } from "@/apollo";
 import TokamakGNB from '../components/Header';
 import '@fontsource/inter';
+import Footer from "@/components/Footer";
 
 export default function Entry({ children }: { children: React.ReactNode }) {
   // const [isMobile] = useMediaQuery("(max-width: 1200px)");
@@ -29,6 +30,7 @@ export default function Entry({ children }: { children: React.ReactNode }) {
     >
       <TokamakGNB />
       <Center> {children} </Center>
+      <Footer />
     </Flex>
     // <Center h={"100vh"}>{children} />
     // <ApolloProvider client={apolloClient}>

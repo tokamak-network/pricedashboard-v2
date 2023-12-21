@@ -25,6 +25,7 @@ function TokamakGNB() {
           _focus={{
             outline: 'none',
           }}
+          textDecor={'none'}
           href={props.url}
         >
           {props.title}

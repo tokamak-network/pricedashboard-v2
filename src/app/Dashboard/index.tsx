@@ -51,7 +51,7 @@ export default function Dashboard () {
         bgColor={'#F7F8FD'} 
         // maxW={'920px'} 
         w={'100%'}
-        h={'880px'} 
+        minH={'610px'} 
         alignItems={'center'}
         justifyContent={'start'}
         flexDir={'column'}
@@ -61,7 +61,7 @@ export default function Dashboard () {
           <Price /> :
           <Supply />
         }
-        <Flex mt={'124px'} flexDir={'row'} fontSize={'20px'}>
+        <Flex mt={'124px'} flexDir={'row'} fontSize={'20px'} mb={'100px'}>
           <Flex fontWeight={300} mr={'5px'}>
             Dune Dashboard:
           </Flex>
