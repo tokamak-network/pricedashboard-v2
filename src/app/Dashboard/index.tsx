@@ -10,15 +10,14 @@ export default function Dashboard () {
   return (
     <Flex 
       flexDir={'column'} 
-      maxW={'100%'} 
-      minW={'1440px'}
+      w={'100vw'}
       justifyContent={'center'} 
       alignItems={'center'}
     >
       <Flex
         flexDir={'row'}
-        fontSize={'36px'}
-        fontWeight={700}
+        fontSize={'30px'}
+        fontWeight={600}
         justifyContent={'start'}
         alignItems={'center'}
         bgColor={'#fff'}
@@ -61,7 +60,7 @@ export default function Dashboard () {
           <Price /> :
           <Supply />
         }
-        <Flex mt={'124px'} flexDir={'row'} fontSize={'20px'} mb={'100px'}>
+        <Flex mt={selected === 'price' ? '124px' : '64px'} flexDir={'row'} fontSize={'20px'} mb={'100px'}>
           <Flex fontWeight={300} mr={'5px'}>
             Dune Dashboard:
           </Flex>

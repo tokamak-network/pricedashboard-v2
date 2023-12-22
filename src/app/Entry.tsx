@@ -21,7 +21,7 @@ export default function Entry({ children }: { children: React.ReactNode }) {
 
   return (
     <Flex 
-      minW={'1440px'} 
+      w={'100%'} 
       justifyContent={'start'} 
       alignItems={'center'} 
       flexDir={'column'}

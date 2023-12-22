@@ -1,12 +1,10 @@
-import { Flex, useTheme } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import SectionTitle from './components/Title';
 import Supply from './components/Supply';
 import Burnt from './components/Burnt';
 
 function TopSection (props: { type: string }) {
   const { type } = props
-  const theme = useTheme();
-  const { STYLE } = theme
   
   return (
     <Flex

@@ -1,3 +1,4 @@
+import BasicTooltip from "@/components/Tooltip";
 import { Flex, Text } from "@chakra-ui/react";
 import '@fontsource/poppins';
 
@@ -23,14 +24,20 @@ function BottomContent (props: {
         fontWeight={600} 
         h={'20px'}
         fontFamily={'Poppins, sans-serif'}
+        alignItems={'center'}
+        w={'43px'}
+        justifyContent={'space-between'}
       >
         {title}
+        <BasicTooltip 
+          label={tooltip}
+        />
       </Flex>
       <Flex 
         fontSize={'14px'} 
         fontWeight={600} 
         h={'14px'} 
-        my={'15px'}
+        my={'10px'}
       >
         {value ? value.toLocaleString(undefined, {maximumFractionDigits:2}) : ''} TON
       </Flex>

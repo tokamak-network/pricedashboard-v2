@@ -30,8 +30,9 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
     >
       <QuestionOutlineIcon
         display={label?.length === 0 ? "none" : ""}
-        h={"16px"}
-        minW={"16px"}
+        h={"14px"}
+        w={"14px"}
+        color={'#333'}
       />
     </Tooltip>
   );

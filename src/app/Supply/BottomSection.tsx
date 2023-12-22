@@ -1,14 +1,11 @@
 import { Flex } from "@chakra-ui/react"
 import SectionTitle from './components/Title';
 import BottomContent from "./components/BottomContent";
-import { useSupply } from '../../hooks/useSupply';
-import { useTONPrice } from '../../hooks/useTONPrice';
+import { useSupplyBottom } from '../../hooks/useSupplyBottom';
 
 function BottomSection () {
-  const {circul} = useSupply()
-  const { tonPriceUSD } = useTONPrice()
-  //@ts-ignore
-  const { C1, C2, C3 } = circul
+  const { circulSupply } = useSupplyBottom()
+  
   return (
     <Flex
       w={'920px'}
@@ -29,24 +26,13 @@ function BottomSection () {
         flexDir={'row'}
         justifyContent={'space-between'}
       >
-        <BottomContent
-          title={'C1'}
-          tooltip={''}
-          value={C1}
-          dollor={C1*tonPriceUSD}
-        />
-        <BottomContent
-          title={'C2'}
-          tooltip={''}
-          value={C1 + C2}
-          dollor={(C1 + C2) * tonPriceUSD}
-        />
-        <BottomContent
-          title={'C3'}
-          tooltip={''}
-          value={C1 + C2 + C3}
-          dollor={(C1 + C2 + C3) * tonPriceUSD}
-        />
+        {
+          circulSupply.map((content: any) => {
+            return (
+              <BottomContent {...content}/>
+            )
+          })
+        }
       </Flex>
     </Flex>
   )

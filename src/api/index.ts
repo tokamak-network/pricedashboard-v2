@@ -53,3 +53,8 @@ export async function getUSDInfo() {
   const res = await axios.get('https://api.frankfurter.app/latest?from=KRW')
   return res.data.rates.USD
 }
+
+export async function getTVL () {
+  const res = await api.get('/tvl')
+  return res.data.tvl
+}

@@ -11,8 +11,9 @@ function TopContent (props: {
   value: string | number
   link?: string
   type?: string
+  span?: string
 }) {
-  const { content, tooltip, value, link, type } = props
+  const { content, tooltip, value, link, type, span } = props
   return (
     <Flex
       flexDir={'row'}
@@ -32,12 +33,25 @@ function TopContent (props: {
           mr={'2px'}
         >
           {content}
+          {
+            span ?
+            (
+              <span
+                style={{
+                  verticalAlign: 'super',
+                  display: 'inline-block',
+                  fontSize: 'smaller',
+                }}
+              >
+                {span}
+              </span>
+            ) : ''
+          }
         </Text>
         <Flex>
           <BasicTooltip 
             label={tooltip}
           />
-          {/* <Image src={QUSETION_IMAGE} alt={'alt'} /> */}
         </Flex>
       </Flex>
       <Flex

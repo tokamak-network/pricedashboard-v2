@@ -6,13 +6,13 @@ function SectionTitle (props: { title: string }) {
   return (
     <Flex
       // minW={'100%'}
-      fontSize={'20px'}
+      fontSize={'25px'}
       fontFamily={'Poppins, sans-serif'}
       fontStyle={'normal'}
-      fontWeight={600}
+      fontWeight={700}
       alignItems={'center'}
       textAlign={'center'}
-      my={'25px'}
+      my={'22px'}
     >
       {title}
     </Flex>
