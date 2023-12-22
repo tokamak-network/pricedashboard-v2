@@ -15,9 +15,9 @@ function Burnt () {
     >
       <Flex flexDir={'column'}>
         {
-          burntContent.map((content: any) => {
+          burntContent.map((content: any, index: number) => {
             return (
-              <TopContent {...content}/>
+              <TopContent {...content} key={index}/>
             )
           })
         }

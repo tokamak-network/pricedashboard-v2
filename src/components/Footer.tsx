@@ -115,18 +115,20 @@ export default function Footer() {
                 flexDir={'column'}
                 alignItems={'space-between'}
                 mr={'10px'}
+                key={index}
               >
                 <Title 
                   title={header}
                 />
                 {
                   //@ts-ignore
-                  footerContetents ? footerContetents.map((content) => {
+                  footerContetents ? footerContetents.map((content: any, index: number) => {
                     return (
                       <Content 
                         title={content.title}
                         link={content.link}
                         span={content.span}
+                        key={index}
                       />
                     )
                   }) : ''

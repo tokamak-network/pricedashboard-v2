@@ -13,9 +13,9 @@ function Supply () {
     >
       <Flex flexDir={'column'}>
         {
-          supplyContent.map((content: any) => {
+          supplyContent.map((content: any, index: number) => {
             return (
-              <TopContent {...content}/>
+              <TopContent {...content} key={index}/>
             )
           })
         }

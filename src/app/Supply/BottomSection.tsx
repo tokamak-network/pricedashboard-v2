@@ -27,9 +27,9 @@ function BottomSection () {
         justifyContent={'space-between'}
       >
         {
-          circulSupply.map((content: any) => {
+          circulSupply.map((content: any, index: number) => {
             return (
-              <BottomContent {...content}/>
+              <BottomContent {...content} key={index}/>
             )
           })
         }
