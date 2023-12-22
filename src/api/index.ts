@@ -36,6 +36,11 @@ export async function getCirculationSupply () {
   return res.data
 }
 
+export async function getSupply () {
+  const res = await api.get('/supply')
+  return res.data
+}
+
 export async function getStakedData() {
   const res = await axios.get('https://tonstarterapi.tokamak.network/v1/stakecontracts?chainId=1');
   const stakeList = res.data.datas;
