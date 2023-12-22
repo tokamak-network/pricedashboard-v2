@@ -33,7 +33,7 @@ function BottomContent (props: {
         alignItems={'center'}
         justifyContent={'center'}
         flexDir={'column'}
-        h={'94px'}
+        h={'74px'}
       >
         <Flex
           fontSize={'18px'}

@@ -2,11 +2,13 @@
 
 import { RecoilRoot } from "recoil";
 import Entry from "./Entry";
+import Favicon from "./favicon.ico"
 
 const HeadMeta = () => {
   return (
     <head>
       <title>Tokamak Price Dashboard</title>
+      <link rel="icon" href="./favicon.ico" sizes="any" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://price.tokamak.network" />
       <meta property="og:title" content="Tokamak Price Dashboard" />
@@ -17,13 +19,13 @@ const HeadMeta = () => {
       <meta
         name="description"
         content="Tokamak Price Dashboard offers a information about TON supply."
-      ></meta>
+      />
       <meta
         property="og:description"
         content="Tokamak Price Dashboard offers a information about TON supply."
-      ></meta>
+      />
       <meta name="keywords" content="tokamak price dashboard supply" />
-      <link rel="icon" href="./favicon.ico" />
+      
     </head>
   );
 };
