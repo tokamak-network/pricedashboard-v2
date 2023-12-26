@@ -57,7 +57,7 @@ export default function Header() {
           Dune Dashboard
         </Link> */}
         <Tooltip 
-          label={'coming soon!'} 
+          label={'Coming soon!'} 
           placement={'auto'}
           hasArrow arrowSize={15}
           bgColor={'#1C1C1C'}
