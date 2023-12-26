@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Header() {
   return (
     <Flex
-      w={'70%'}
+      w={'60%'}
       // minW={''}
       h={'80px'}
       bg={'#fff'}
