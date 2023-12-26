@@ -11,6 +11,7 @@ import { useTONPrice } from './useTONPrice';
 type SupplyValueProps = {
   content: string;
   tooltip: string;
+  tooltip2?: string;
   value: string | number;
   link?: string
   type?: string
@@ -80,7 +81,7 @@ export function useSupply () {
       
       setSupplyContent([
         {
-          content: "Total Supply*",
+          content: "Total Supply",
           tooltip: "The cumulative TON generated until the present Ethereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage.",
           value: totalSupply,
           link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract#F64",
@@ -88,7 +89,8 @@ export function useSupply () {
         },
         {
           content: "Circulating Supply",
-          tooltip: "ON Circulating Supply = TON Total Supply - TON locked in vesting- TON locked in DAO Vault - TON Staked   The amount of circulating TON in the market",
+          tooltip: "TON Circulating Supply = TON Total Supply - TON locked in vesting- TON locked in DAO Vault - TON Staked",
+          tooltip2: "The amount of circulating TON in the market",
           value: circulatedSupply,
           link: "",
         },

@@ -8,12 +8,13 @@ import BasicTooltip from "@/components/Tooltip";
 function TopContent (props: {
   content: string,
   tooltip: string,
+  tooltip2?: string,
   value: string | number
   link?: string
   type?: string
   span?: string
 }) {
-  const { content, tooltip, value, link, type, span } = props
+  const { content, tooltip, tooltip2, value, link, type, span } = props
   return (
     <Flex
       flexDir={'row'}
@@ -51,6 +52,7 @@ function TopContent (props: {
         <Flex>
           <BasicTooltip 
             label={tooltip}
+            label2={tooltip2}
           />
         </Flex>
       </Flex>

@@ -1,4 +1,4 @@
-import { Flex, Link, Text } from "@chakra-ui/react";
+import { Flex, Link, Text, Tooltip } from "@chakra-ui/react";
 import LOGO from '@/assets/Tokamak_transparent.png'
 import Image from 'next/image'
 
@@ -56,11 +56,22 @@ export default function Header() {
         >
           Dune Dashboard
         </Link> */}
-        <Text
-          color={'#1C1C1C80'}
+        <Tooltip 
+          label={'coming soon!'} 
+          placement={'auto'}
+          hasArrow arrowSize={15}
+          bgColor={'#1C1C1C'}
+          color={'#fff'}
+          padding={'5px'}
+          borderRadius={"3px"}
         >
-          Dune Dashboard
-        </Text>
+          <Text
+            color={'#1C1C1C80'}
+            cursor={'pointer'}
+          >
+            Dune Dashboard
+          </Text>
+        </Tooltip>
       </Flex>
       
     </Flex>
