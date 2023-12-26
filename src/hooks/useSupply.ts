@@ -21,7 +21,7 @@ export function useSupply () {
 
   const [supplyContent, setSupplyContent] = useState<SupplyValueProps[]>([
     {
-      content: "Total Supply*",
+      content: "Total Supply",
       tooltip: "The cumulative TON generated until the present Ethereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage.",
       value: "- ",
       link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract",
