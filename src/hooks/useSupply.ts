@@ -25,6 +25,7 @@ export function useSupply () {
       tooltip: "The cumulative TON generated until the present Ethereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage.",
       value: "- ",
       link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract",
+      span: '†'
     },
     {
       content: "Circulating Supply",
@@ -82,11 +83,12 @@ export function useSupply () {
           content: "Total Supply*",
           tooltip: "The cumulative TON generated until the present Ethereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage.",
           value: totalSupply,
-          link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract",
+          link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract#F64",
+          span: '†'
         },
         {
           content: "Circulating Supply",
-          tooltip: "The amount of circulating TON derived using the formula : TON Circulating Supply = TON Total Supply - TON locked in vesting- TON locked in DAO Vault - TON Staked ",
+          tooltip: "ON Circulating Supply = TON Total Supply - TON locked in vesting- TON locked in DAO Vault - TON Staked   The amount of circulating TON in the market",
           value: circulatedSupply,
           link: "",
         },

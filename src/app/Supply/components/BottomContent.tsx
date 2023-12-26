@@ -5,10 +5,11 @@ import '@fontsource/poppins';
 function BottomContent (props: { 
   title: string,
   tooltip: string,
+  tooltip2?: string,
   value: number | string,
   dollor: number | string
 }) {
-  const { title, tooltip, value, dollor } = props;
+  const { title, tooltip, value, dollor, tooltip2 } = props;
 
   return (
     <Flex
@@ -31,6 +32,7 @@ function BottomContent (props: {
         {title}
         <BasicTooltip 
           label={tooltip}
+          label2={tooltip2}
         />
       </Flex>
       <Flex 

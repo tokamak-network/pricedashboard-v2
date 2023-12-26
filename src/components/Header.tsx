@@ -40,17 +40,6 @@ export default function Header() {
         <Link 
           target="_blank"
           rel="noopener noreferrer"
-          href="https://tokamak.network"
-          textDecor={'none'}
-          color="#1c1c1c"
-          fontSize={'16px'}
-          mr={'40px'}
-        >
-          What is TON?
-        </Link>
-        <Link 
-          target="_blank"
-          rel="noopener noreferrer"
           href="https://upbit.com/exchange?code=CRIX.UPBIT.KRW-TON"
           textDecor={'none'}
           color="#1c1c1c"

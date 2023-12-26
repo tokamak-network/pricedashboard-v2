@@ -16,13 +16,6 @@ type BurntValueProps = {
 export function useBurnt () {
   const [burntContent, setBurntContent] = useState<BurntValueProps[]>([
     {
-      content: "Vested",
-      tooltip: "The number represents the amount of TON still under vesting. More details can be found in the vesting schedule which outlines allocations for different entities. Vesting ends on 26 Dec 2023(<Block Number>).",
-      value: '',
-      link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract",
-      span: '††'
-    },
-    {
       content: "Locked in DAO Vault",
       tooltip: "TON securely held within the DAO vault for an indefinite period.",
       value: '',
@@ -35,6 +28,13 @@ export function useBurnt () {
       value: '' ,
       link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract#F59",
       span: '†'
+    },
+    {
+      content: "Vested",
+      tooltip: "The number represents the amount of TON still under vesting. More details can be found in the vesting schedule which outlines allocations for different entities. Vesting ends on 26 Dec 2023(<Block Number>).",
+      value: '',
+      link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract",
+      span: '††'
     },
     // {
     //   content: "Tonstarter Mining",
@@ -53,13 +53,6 @@ export function useBurnt () {
       
       setBurntContent([
         {
-          content: "Vested",
-          tooltip: "The number represents the amount of TON still under vesting. More details can be found in the vesting schedule which outlines allocations for different entities. Vesting ends on 26 Dec 2023(<Block Number>).",
-          value: supply.vestingAmount,
-          link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract",
-          span: '††'
-        },
-        {
           content: "DAO Vault",
           tooltip: "TON securely held within the DAO vault for an indefinite period.",
           value: supply.daoValue,
@@ -72,6 +65,13 @@ export function useBurnt () {
           value: totalStaked ,
           link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract#F59",
           span: '†'
+        },
+        {
+          content: "Vested",
+          tooltip: "The number represents the amount of TON still under vesting. More details can be found in the vesting schedule which outlines allocations for different entities. Vesting ends on 26 Dec 2023(<Block Number>).",
+          value: supply.vestingAmount,
+          link: "https://onther.notion.site/Vesting-Contract-Information-2dae61046b38492f829eeccb4922a43f",
+          span: '††'
         },
         // {
         //   content: "Tonstarter Mining",
