@@ -25,7 +25,7 @@ export default function Supply () {
         />
       </Flex>
       <BottomSection />
-      <Flex mt={'40px'} alignItems={'center'}>
+      {/* <Flex mt={'40px'} alignItems={'center'}>
         <Link 
           outline={'#007AFF'}
           rel="noopener noreferrer" target="_blank"
@@ -36,7 +36,7 @@ export default function Supply () {
         <Flex ml={'5px'}>
           <Image src={LINK_ICON} alt=""/>
         </Flex>
-      </Flex>
+      </Flex> */}
     </Flex>
   )
 }

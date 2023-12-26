@@ -3,7 +3,8 @@ import {
   getTotalSupply, 
   getCirculateSupply,
   getCirculationSupply,
-  getTVL
+  getTVL,
+  getSupply
 } from '@/api'
 import { useTONPrice } from './useTONPrice';
 
@@ -58,6 +59,13 @@ export function useSupply () {
       link: "",
       type: "usd"
     },
+    {
+      content: "Burned",
+      tooltip: "The total TON that has been burned to date.",
+      value: '',
+      link: "https://etherscan.io/token/0x2be5e8c109e2197D077D13A82dAead6a9b3433C5?a=0x0000000000000000000000000000000000000001",
+      span: '††'
+    },
   ])
   const { tonPriceUSD } = useTONPrice();
 
@@ -67,6 +75,7 @@ export function useSupply () {
       const circulatedSupply = await getCirculateSupply();
       const circulation = await getCirculationSupply();
       const tvl = await getTVL();
+      const supply = await getSupply();
       
       setSupplyContent([
         {
@@ -107,6 +116,13 @@ export function useSupply () {
           value: tvl,
           link: "",
           type: "usd"
+        },
+        {
+          content: "Burned",
+          tooltip: "The total TON that has been burned to date.",
+          value: supply.burnedValue,
+          link: "https://etherscan.io/token/0x2be5e8c109e2197D077D13A82dAead6a9b3433C5?a=0x0000000000000000000000000000000000000001",
+          span: '††'
         },
       ])
     }

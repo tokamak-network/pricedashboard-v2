@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { 
-  getStakedData,
   getSupply,
   getTotalStaked,
 } from '@/api'
@@ -24,13 +23,6 @@ export function useBurnt () {
       span: '††'
     },
     {
-      content: "Burned",
-      tooltip: "The total TON that has been burned to date.",
-      value: '',
-      link: "https://etherscan.io/token/0x2be5e8c109e2197D077D13A82dAead6a9b3433C5?a=0x0000000000000000000000000000000000000001",
-      span: '††'
-    },
-    {
       content: "Locked in DAO Vault",
       tooltip: "TON securely held within the DAO vault for an indefinite period.",
       value: '',
@@ -44,18 +36,18 @@ export function useBurnt () {
       link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract#F59",
       span: '†'
     },
-    {
-      content: "Tonstarter Mining",
-      tooltip: "TON staked in TONStarter mining contract",
-      value: '' ,
-      link: "https://etherscan.io/address/0x9a8294566960ab244d78d266ffe0f284cdf728f1",
-      span: '†'
-    },
+    // {
+    //   content: "Tonstarter Mining",
+    //   tooltip: "TON staked in TONStarter mining contract",
+    //   value: '' ,
+    //   link: "https://etherscan.io/address/0x9a8294566960ab244d78d266ffe0f284cdf728f1",
+    //   span: '†'
+    // },
   ])
 
   useEffect(() => {
     async function fetch() {
-      const stakedData = await getStakedData();
+      // const stakedData = await getStakedData();
       const totalStaked = await getTotalStaked();
       const supply = await getSupply();
       
@@ -68,14 +60,7 @@ export function useBurnt () {
           span: '††'
         },
         {
-          content: "Burned",
-          tooltip: "The total TON that has been burned to date.",
-          value: supply.burnedValue,
-          link: "https://etherscan.io/token/0x2be5e8c109e2197D077D13A82dAead6a9b3433C5?a=0x0000000000000000000000000000000000000001",
-          span: '††'
-        },
-        {
-          content: "Locked in DAO Vault",
+          content: "DAO Vault",
           tooltip: "TON securely held within the DAO vault for an indefinite period.",
           value: supply.daoValue,
           link: "https://etherscan.io/token/0x2be5e8c109e2197D077D13A82dAead6a9b3433C5?a=0x2520CD65BAa2cEEe9E6Ad6EBD3F45490C42dd303",
@@ -88,13 +73,13 @@ export function useBurnt () {
           link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract#F59",
           span: '†'
         },
-        {
-          content: "Tonstarter Mining",
-          tooltip: "TON staked in TONStarter mining contract",
-          value: stakedData ,
-          link: "https://etherscan.io/address/0x9a8294566960ab244d78d266ffe0f284cdf728f1",
-          span: '†'
-        },
+        // {
+        //   content: "Tonstarter Mining",
+        //   tooltip: "TON staked in TONStarter mining contract",
+        //   value: stakedData ,
+        //   link: "https://etherscan.io/address/0x9a8294566960ab244d78d266ffe0f284cdf728f1",
+        //   span: '†'
+        // },
       ])
       
     }

@@ -8,7 +8,7 @@ const HeadMeta = () => {
   return (
     <head>
       <title>Tokamak Price Dashboard</title>
-      <link rel="icon" href="./favicon.ico" sizes="any" />
+      <link rel="icon" href="favicon.ico" sizes="any" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://price.tokamak.network" />
       <meta property="og:title" content="Tokamak Price Dashboard" />

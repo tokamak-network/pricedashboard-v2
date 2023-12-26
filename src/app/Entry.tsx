@@ -4,9 +4,10 @@ import { Center, Flex, useMediaQuery } from "@chakra-ui/react";
 // import { ApolloProvider } from "@apollo/client";
 // import useConnectedNetwork from "@/hooks/network";
 // import { apolloClient } from "@/apollo";
-import TokamakGNB from '../components/Header';
+import TokamakGNB from '../components/TokamakGNB';
 import '@fontsource/inter';
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export default function Entry({ children }: { children: React.ReactNode }) {
   // const [isMobile] = useMediaQuery("(max-width: 1200px)");
@@ -23,13 +24,17 @@ export default function Entry({ children }: { children: React.ReactNode }) {
     <Flex 
       w={'100%'} 
       justifyContent={'start'} 
-      alignItems={'center'} 
+      
       flexDir={'column'}
       bgColor={'#fff'}
       fontFamily={'Inter, sans-serif'}
     >
       <TokamakGNB />
-      <Center> {children} </Center>
+      <Header />
+      <Flex alignItems={'center'} >
+        <Center> {children} </Center>
+
+      </Flex>
       <Footer />
     </Flex>
     // <Center h={"100vh"}>{children} />
