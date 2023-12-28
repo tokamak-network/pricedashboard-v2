@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import '@fontsource/poppins';
 
 function BottomContent (props: { 
@@ -7,24 +7,27 @@ function BottomContent (props: {
   usd: number | string,
 }) {
   const { title, krw, usd } = props;
-
+  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  console.log(isMobile)
   return (
     <Flex
-      flexDir={'column'}
-      w={'215px'}
-      h={'156px'}
-      // justifyContent={'center'}
-      // alignItems={'center'}
+      flexDir={isMobile ? 'row' : 'column'}
+      minW={isMobile ? '330px' : '215px'}
+      h={isMobile ? '101px' : '156px'}
+      justifyContent={isMobile ? 'space-between' :''}
+      // alignItems={isMobile ? '' : 'space-between'}
       color={'#333'}
       bg={'#eceef9'}
       boxShadow={'1px 1px 5px 0px rgba(0, 0, 0, 0.10) inset'}
       borderRadius={'10px'}
       fontWeight={600}
-      fontSize={'14px'}
+      fontSize={isMobile ? '16px' : '14px'}
+      mb={isMobile? '20px' : ''}
     >
       <Flex 
         flexDir={'row'} 
         ml={'20px'} 
+        alignItems={'center'}
         fontFamily={'Poppins, sans-serif'}
       >
         <Text>{title}</Text>
@@ -33,7 +36,9 @@ function BottomContent (props: {
         alignItems={'center'}
         justifyContent={'center'}
         flexDir={'column'}
-        h={'74px'}
+        h={isMobile ? '' : '74px'}
+        mr={isMobile ? '20px' : ''}
+        // h={'74px'}
       >
         <Flex
           fontSize={'18px'}

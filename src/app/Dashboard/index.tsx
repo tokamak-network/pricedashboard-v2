@@ -2,10 +2,12 @@ import { Flex } from "@chakra-ui/layout";
 import { useState } from "react";
 import Price from "../Price";
 import Supply from "../Supply";
+import { useMediaQuery } from "@chakra-ui/react";
 
 
 export default function Dashboard () {
   const [selected, setSelected] = useState('price');
+  const [isMobile] = useMediaQuery("(max-width: 1200px)");
   
   return (
     <Flex 
@@ -16,13 +18,13 @@ export default function Dashboard () {
     >
       <Flex
         flexDir={'row'}
-        fontSize={'30px'}
+        fontSize={isMobile ? '24px' : '30px'}
         fontWeight={600}
-        justifyContent={'start'}
+        justifyContent={isMobile ? 'center' : 'start'}
         alignItems={'center'}
         bgColor={'#fff'}
         h={'120px'}
-        w={'920px'}
+        w={isMobile ? '100%' : '920px'}
       >
         <Flex
           color={selected === 'price' ? '#333' : '#B2C1D2'}
@@ -60,7 +62,7 @@ export default function Dashboard () {
           <Price /> :
           <Supply />
         }
-        <Flex mt={selected === 'price' ? '124px' : '64px'} flexDir={'row'} fontSize={'20px'} mb={'100px'}>
+        <Flex mt={selected === 'price' ? '124px' : '64px'} flexDir={isMobile ? 'column' :'row'} fontSize={'20px'} mb={'100px'}>
           <Flex fontWeight={300} mr={'5px'}>
             Dune Dashboard:
           </Flex>

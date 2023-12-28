@@ -1,5 +1,5 @@
 import BasicTooltip from "@/components/Tooltip";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import '@fontsource/poppins';
 
 function BottomContent (props: { 
@@ -10,6 +10,7 @@ function BottomContent (props: {
   dollor: number | string
 }) {
   const { title, tooltip, value, dollor, tooltip2 } = props;
+  const [isMobile] = useMediaQuery("(max-width: 1200px)");
 
   return (
     <Flex
@@ -18,6 +19,7 @@ function BottomContent (props: {
       h={'66px'}
       justifyContent={'center'}
       alignItems={'center'}
+      mb={isMobile? '30px' : ''}
     >
       <Flex 
         flexDir={'row'} 

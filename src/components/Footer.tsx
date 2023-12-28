@@ -1,6 +1,7 @@
-import { Flex, Link } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Link, useMediaQuery } from "@chakra-ui/react";
 
 export default function Footer() {
+  const [isMobile] = useMediaQuery("(max-width: 1200px)");
   const contentHeader = [
     'About', 'Mainnet', 'L2 On-Demand', 'Ecosystem', 'Developers', 'Community'
   ]
@@ -97,14 +98,19 @@ export default function Footer() {
   return (
     <Flex
       flexDir={'column'}
-      w={'90%'}
-      mx={'100px'}
+      w={isMobile ? '100%' : '90%'}
+      mx={isMobile ? '' : '100px'}
+      alignItems={isMobile ? 'center' : ''}
       mt={'50px'}
     >
-      <Flex
+      <SimpleGrid
         flexDir={'row'}
-        justifyContent={'space-between'}
-        minW={'100%'}
+        justifyContent={isMobile? 'center' : 'space-between'}
+        minW={isMobile ? '165px' : '100%'}
+        // templateColumns={isMobile? 'repeat(2, 1fr)' : 'repeat(6, 1fr)'}
+        minChildWidth={'150px'}
+        rowGap={isMobile? 20 : 0}
+        gap={isMobile? 20 : 0}
       >
         {
           contentHeader.map((header: any, index: number) => {
@@ -137,7 +143,7 @@ export default function Footer() {
             )
           })
         }
-      </Flex>
+      </SimpleGrid>
       <Flex mt={'60px'} mb={'45px'} h={'1px'} bgColor={'#dfe4ee'} minW={'100%'}/>
       <Flex 
         flexDir={'row'}

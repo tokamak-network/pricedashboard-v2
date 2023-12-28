@@ -1,15 +1,17 @@
-import { Flex, Link } from "@chakra-ui/react";
+import { Flex, Link, useMediaQuery } from "@chakra-ui/react";
 import TopContent from './TopContent';
 import { useSupply } from '../../../hooks/useSupply';
 
 function Supply () {
   const { supplyContent } = useSupply();
+  const [isMobile] = useMediaQuery("(max-width: 1200px)");
   
   return (
     <Flex
       flexDir={'column'}
-      h={'250px'}
+      h={isMobile ? '395px' : '250px'}
       justifyContent={'space-between'}
+      // w={isMobile ? '330px' : ''}
     >
       <Flex flexDir={'column'}>
         {
@@ -21,6 +23,7 @@ function Supply () {
         }
         <Flex 
           fontSize={'10px'}
+          justifyContent={isMobile ? 'center' : ''}
         >
           <Link 
             outline={'#007AFF'}

@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react"
+import { Flex, Text, useMediaQuery } from "@chakra-ui/react"
 import Image from "next/image";
 import QUSETION_IMAGE from '@/assets/Question.svg'
 import LINK_ICON from '@/assets/foreign.svg'
@@ -15,18 +15,21 @@ function TopContent (props: {
   span?: string
 }) {
   const { content, tooltip, tooltip2, value, link, type, span } = props
+  const [isMobile] = useMediaQuery("(max-width: 1200px)");
   return (
     <Flex
       flexDir={'row'}
-      w={'396px'}
+      w={isMobile ? '90%' : '396px'}
       h={'16px'}
-      mb={'14px'}
+      mb={isMobile ? '27px' : '14px'}
       justifyContent={'space-between'}
       fontSize={'14px'}
+      px={'15px'}
     >
       <Flex
         flexDir={'row'}
         alignItems={'center'}
+        w={isMobile ? '140px' : ''}
       >
         <Text
           fontStyle={'normal'}
