@@ -96,7 +96,7 @@ export function useSupply () {
         },
         {
           content: "Circulating Supply (Upbit Standard)",
-          tooltip: "Circulating supply calculated based on upbit standard to the date. ",
+          tooltip: "The circulating supply, calculated by following Upbit’s criteria, factors in staked WTON, considering it available rather than locked.",
           value: circulation.totalCirculationSupply,
           link: "",
         },
