@@ -24,6 +24,7 @@ function Supply () {
         <Flex 
           fontSize={'10px'}
           justifyContent={isMobile ? 'center' : ''}
+          ml={isMobile ? '' : '15px'}
         >
           <Link 
             outline={'#007AFF'}
