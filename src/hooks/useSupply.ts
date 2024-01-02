@@ -89,7 +89,7 @@ export function useSupply () {
         },
         {
           content: "Circulating Supply",
-          tooltip: "TON Circulating Supply = TON Total Supply - TON locked in vesting- TON locked in DAO Vault - TON Staked",
+          tooltip: "TON Circulating Supply = Total Supply - Vested - DAO Vault - Staked",
           tooltip2: "The amount of circulating TON in the market",
           value: circulation.C1,
           link: "",
@@ -102,14 +102,14 @@ export function useSupply () {
         },
         {
           content: "Market Cap",
-          tooltip: "",
+          tooltip: "Market Cap = Circulating Supply * Price Per TON",
           value: +circulatedSupply * tonPriceUSD,
           link: "",
           type: 'usd'
         },
         {
           content: "FDV",
-          tooltip: "",
+          tooltip: "FDV = Total Supply * Price per TON",
           value: +totalSupply * tonPriceUSD,
           link: "",
           type: "usd"

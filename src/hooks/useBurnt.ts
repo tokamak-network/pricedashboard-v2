@@ -68,7 +68,7 @@ export function useBurnt () {
         },
         {
           content: "Vested",
-          tooltip: "The number represents the amount of TON still under vesting. More details can be found in the vesting schedule which outlines allocations for different entities. Vesting ends on 26 Dec 2023(<Block Number>).",
+          tooltip: "The number represents the amount of TON still under vesting. More details can be found in the vesting schedule which outlines allocations for different entities. Vesting ends on 26 Dec 2023 5:00:00 GMT+09:00.",
           value: supply.vestingAmount,
           link: "https://onther.notion.site/Vesting-Contract-Information-2dae61046b38492f829eeccb4922a43f",
           span: '††'

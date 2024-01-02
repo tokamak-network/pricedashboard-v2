@@ -43,14 +43,14 @@ export function useSupplyBottom () {
       setCirculSupply([
         {
           title: "C1",
-          tooltip: "C1 = TON Total Supply - TON locked in vesting - TON locked in DAO Vault - TON Staked ",
+          tooltip: "C1 = Total Supply - Vested - DAO Vault - Staked ",
           tooltip2: "A supply measure that indicates TON that is immediately accessible for conversion to cash without any restrictions from staking, vesting, or DAO constraints",
           value: C1,
           dollor: C1 * tonPriceUSD,
         },
         {
           title: "C2",
-          tooltip: "C2 = C1 + Staked TON + TON Locked in vesting - TONStarter mining ",
+          tooltip: "C2 = C1 + Staked + Vested - TONStarter Mining",
           tooltip2: "A supply measure considering short term locked TON(< 3 months).This supply metric considers staked (excluding TONStarter Staking) and vested TON, excluding DAO-locked TON, which remains locked indefinitely. TONStarter mining = 1,731,048 TON",
           value: C1 + C2,
           dollor: (C1 + C2) * tonPriceUSD,
