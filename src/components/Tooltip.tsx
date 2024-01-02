@@ -6,6 +6,7 @@ import {
 } from "@chakra-ui/react";
 
 import { QuestionOutlineIcon } from "@chakra-ui/icons";
+import { useState } from "react";
 
 type tooltipProps = {
   label: string | undefined;
@@ -16,6 +17,7 @@ type tooltipProps = {
 const BasicTooltip: React.FC<tooltipProps> = (props) => {
   const { colorMode } = useColorMode();
   const { label, label2, placement } = props;
+  const [isLabelOpen, setIsLabelOpen] = useState(false)
 
   return (
     <Tooltip
@@ -35,6 +37,7 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
       fontSize="12px"
       maxW={'200px'}
       padding={'5px'}
+      isOpen={isLabelOpen}
       border={colorMode === "light" ? "solid 1px #e8edf2" : "solid 1px #313442"}
     >
       <QuestionOutlineIcon
@@ -42,6 +45,9 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
         h={"14px"}
         w={"14px"}
         color={'#333'}
+        onMouseEnter={() => setIsLabelOpen(true)}
+        onMouseLeave={() => setIsLabelOpen(false)}
+        onClick={() => setIsLabelOpen(true)}
       />
     </Tooltip>
   );

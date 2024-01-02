@@ -1,9 +1,7 @@
-import {Flex, Link} from '@chakra-ui/react';
-import PrevArrowIcon from '@/assets/pagenate-prev-arrow-icon-inactive_1.svg';
-import NextArrowIcon from '@/assets/pagenate-prev-arrow-icon-inactive_2.svg';
-import {useRef, useEffect, useState} from 'react';
+import {Flex, Link, Image} from '@chakra-ui/react';
+import PREV from '@/assets/pagenate-prev-arrow-icon-inactive_1.svg';
+import NextArrowIcon from '../assets/pagenate-prev-arrow-icon-inactive_2.svg';
 import '../css/gnb_mobile.css';
-import styled from '@emotion/styled';
 import '@fontsource/titillium-web';
 
 const menus = [
@@ -42,11 +40,7 @@ const menus = [
 let currentPosition = 0;
 let touchStartX = 0;
 let deviceWidth = 0;
-if (typeof window !== "undefined") {
-  deviceWidth = window.innerWidth;
-}
-console.log(NextArrowIcon)
-console.log(PrevArrowIcon)
+if (typeof window !== "undefined") deviceWidth = window.innerWidth;
 
 const toRightXvalue = () => {
   switch (currentPosition) {
@@ -171,14 +165,16 @@ function MobileTokamakGNB() {
   return (
     <div
       className="gnb_mobile_header"
-      style={{fontFamily: 'Titillium Web, sans-serif'}}>
-      <img
-        src={PrevArrowIcon}
+      style={{fontFamily: 'Titillium Web, sans-serif'}}
+    >
+      <Image
+        src={PREV}
         alt={''}
         height={'40px'}
         onClick={(e) => {
           handleNavigation(e, false);
-        }}></img>
+        }}
+      />
       <div className="gnb_mobile_menu_wrap">
         {menus.map((menu, index) => (
           <a

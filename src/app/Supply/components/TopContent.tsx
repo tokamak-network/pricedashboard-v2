@@ -1,6 +1,6 @@
 import { Flex, Text, useMediaQuery } from "@chakra-ui/react"
 import Image from "next/image";
-import QUSETION_IMAGE from '@/assets/Question.svg'
+
 import LINK_ICON from '@/assets/foreign.svg'
 import Link from "next/link";
 import BasicTooltip from "@/components/Tooltip";
