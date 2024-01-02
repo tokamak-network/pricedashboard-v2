@@ -27,6 +27,7 @@ function BottomSection () {
         flexDir={isMobile ? 'column' : 'row'}
         justifyContent={'space-between'}
         alignItems={'center'}
+        mt={isMobile ? '40px' : ''}
       >
         {
           circulSupply.map((content: any, index: number) => {

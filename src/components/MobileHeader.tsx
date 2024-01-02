@@ -31,7 +31,7 @@ function MobileHeader() {
       h="80px"
       alignItems={"center"}
       justifyContent={"space-between"}
-      width="100%"
+      width="90%"
       px={'20px'}
     >
       <Image 
@@ -51,7 +51,7 @@ function MobileHeader() {
           }}
           p={0}
           // ml="10px"
-          mr={'30px'}
+          // mr={'30px'}
           ref={btnRef}
           onClick={onOpen}
           outline={'none'}
