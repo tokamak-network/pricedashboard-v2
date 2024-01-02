@@ -1,5 +1,6 @@
 import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import '@fontsource/poppins';
+import { commafyWithUndefined } from '../../utils/commify';
 
 function BottomContent (props: { 
   title: string,
@@ -43,7 +44,7 @@ function BottomContent (props: {
         <Flex
           fontSize={'18px'}
         >
-          {krw.toLocaleString(undefined, {maximumFractionDigits: 0})} KRW
+          {commafyWithUndefined(krw, 0)} KRW
         </Flex>
         <Flex
           fontWeight={300}

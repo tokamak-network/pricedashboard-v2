@@ -23,9 +23,9 @@ export function useSupply () {
   const [supplyContent, setSupplyContent] = useState<SupplyValueProps[]>([
     {
       content: "Total Supply",
-      tooltip: "The cumulative TON generated until the present ETHereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage.",
+      tooltip: "The cumulative TON generated until the present ethereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage.",
       value: "- ",
-      link: "https://ETHerscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract",
+      link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract",
       span: '†'
     },
     {
@@ -82,9 +82,9 @@ export function useSupply () {
       setSupplyContent([
         {
           content: "Total Supply",
-          tooltip: "The cumulative TON generated until the present ETHereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage.",
+          tooltip: "The cumulative TON generated until the present ethereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage.",
           value: totalSupply,
-          link: "https://ETHerscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract#F64",
+          link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract#F64",
           span: '†'
         },
         {

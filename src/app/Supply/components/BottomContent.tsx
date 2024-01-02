@@ -1,6 +1,7 @@
 import BasicTooltip from "@/components/Tooltip";
 import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import '@fontsource/poppins';
+import { commafyWithUndefined } from '../../../utils/commify';
 
 function BottomContent (props: { 
   title: string,
@@ -43,10 +44,10 @@ function BottomContent (props: {
         h={'14px'} 
         my={'10px'}
       >
-        {value ? value.toLocaleString(undefined, { maximumFractionDigits: 0 }) : ''} TON
+        {value ? commafyWithUndefined(value, 0): ''} TON
       </Flex>
       <Flex fontSize={'14px'} fontWeight={300} h={'14px'} mb={'25px'}>
-        ${dollor ? dollor.toLocaleString(undefined, { maximumFractionDigits: 0 }) : ''} USD
+        ${dollor ? commafyWithUndefined(dollor, 0) : ''} USD
       </Flex>
     </Flex>
   )

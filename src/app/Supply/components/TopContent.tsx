@@ -5,6 +5,7 @@ import LINK_ICON from '@/assets/foreign.svg'
 import PREV from '@/assets/pagenate-prev-arrow-icon-inactive_1.svg';
 import Link from "next/link";
 import BasicTooltip from "@/components/Tooltip";
+import { commafyWithUndefined } from '../../../utils/commify';
 
 function TopContent (props: {
   content: string,
@@ -65,10 +66,7 @@ function TopContent (props: {
         alignItems={'center'}
       >
         {type ? '$' :''}
-        {value ? value.toLocaleString(undefined, {
-          maximumFractionDigits: 0,
-          minimumFractionDigits: 0
-        }) : '0'}
+        {value ? commafyWithUndefined(value, 0) : '0'}
         {!type ? <Text ml={'3px'}>TON</Text> : ''}
         {
           link ? (
