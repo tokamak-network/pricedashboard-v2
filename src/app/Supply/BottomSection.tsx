@@ -5,7 +5,7 @@ import { useSupplyBottom } from '../../hooks/useSupplyBottom';
 
 function BottomSection () {
   const { circulSupply } = useSupplyBottom()
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
   
   return (
     <Flex

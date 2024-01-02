@@ -10,7 +10,7 @@ function TopContent (props: {
   type: string
 }) {
   const { krw, usd, type } = props
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
   return (
     <Flex
       flexDir={'row'}
@@ -26,8 +26,8 @@ function TopContent (props: {
       boxShadow={'1px 1px 5px 0px rgba(0, 0, 0, 0.10) inset'}
       borderRadius={'10px'}
     >
-      <Flex flexDir={'row'} h={isMobile ? '54px' : '72px'}  alignItems={'center'} ml={'27px'}>
-        <Image src={type === 'ton' ? TON_LOGO : TOS_LOGO} alt={""} width={isMobile? 54 : 72} />
+      <Flex flexDir={'row'} h={isMobile ? '54px' : '72px'}  alignItems={'center'} ml={isMobile ? '15px' :'27px'}>
+        <Image src={type === 'ton' ? TON_LOGO : TOS_LOGO} alt={""} width={isMobile? 44 : 72} />
         <Flex ml={isMobile ? '8px' : '18px'} fontFamily={'Poppins, sans-serif'}>
           {type === 'ton' ? 'TON Price' : 'TOS Price'}
         </Flex>

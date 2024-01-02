@@ -7,7 +7,7 @@ import { useMediaQuery } from "@chakra-ui/react";
 
 export default function Dashboard () {
   const [selected, setSelected] = useState('price');
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
   
   return (
     <Flex 

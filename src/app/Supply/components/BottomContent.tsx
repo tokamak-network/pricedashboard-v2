@@ -10,7 +10,7 @@ function BottomContent (props: {
   dollor: number | string
 }) {
   const { title, tooltip, value, dollor, tooltip2 } = props;
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
 
   return (
     <Flex

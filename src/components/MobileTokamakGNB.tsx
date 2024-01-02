@@ -1,6 +1,6 @@
 import {Flex, Link} from '@chakra-ui/react';
-import PrevArrowIcon from '../assets/pagenate-prev-arrow-icon-inactive_1.svg';
-import NextArrowIcon from '../assets/pagenate-prev-arrow-icon-inactive_2.svg';
+import PrevArrowIcon from '@/assets/pagenate-prev-arrow-icon-inactive_1.svg';
+import NextArrowIcon from '@/assets/pagenate-prev-arrow-icon-inactive_2.svg';
 import {useRef, useEffect, useState} from 'react';
 import '../css/gnb_mobile.css';
 import styled from '@emotion/styled';
@@ -35,13 +35,17 @@ const menus = [
   {
     title: "Launchpad",
     url: "https://tonstarter.tokamak.network/",
-    isFoucsed: true,
+    isFoucsed: false,
   },
 ];
 
 let currentPosition = 0;
 let touchStartX = 0;
-const deviceWidth = window.innerWidth;
+let deviceWidth = 0;
+if (typeof window !== "undefined") {
+  deviceWidth = window.innerWidth;
+}
+
 
 const toRightXvalue = () => {
   switch (currentPosition) {

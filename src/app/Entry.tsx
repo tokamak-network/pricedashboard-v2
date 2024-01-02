@@ -9,9 +9,10 @@ import '@fontsource/inter';
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MobileTokamakGNB from "@/components/MobileTokamakGNB";
+import MobileHeader from "@/components/MobileHeader";
 
 export default function Entry({ children }: { children: React.ReactNode }) {
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
 
   return (
     <Flex 
@@ -22,12 +23,11 @@ export default function Entry({ children }: { children: React.ReactNode }) {
       fontFamily={'Inter, sans-serif'}
     >
       {
-        isMobile ? 
-        // <MobileTokamakGNB /> : 
-        '' :
-        <TokamakGNB />
+        isMobile ? <MobileTokamakGNB /> : <TokamakGNB />
       }
-      <Header />
+      {
+        isMobile ? <MobileHeader /> : <Header />
+      }
       <Flex alignItems={'center'} >
         <Center> {children} </Center>
       </Flex>

@@ -7,8 +7,8 @@ function BottomContent (props: {
   usd: number | string,
 }) {
   const { title, krw, usd } = props;
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
-  console.log(isMobile)
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
+  
   return (
     <Flex
       flexDir={isMobile ? 'row' : 'column'}

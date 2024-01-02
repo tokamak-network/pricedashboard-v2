@@ -4,7 +4,7 @@ import BottomSection from "./BottomSection";
 import { useMediaQuery } from "@chakra-ui/react";
 
 export default function Supply () {
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
 
   return (
     <Flex 

@@ -10,7 +10,7 @@ export default function Price () {
   const { tonPriceKRW, tonPriceUSD } = useTONPrice();
   const { tosPriceKRW, tosPriceUSD } = useTOSPrice()
   const { highPrice, lowPrice, openingPrice, closingPrice, USD } = useTONTradeInfo();
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
  
   return (
     <Flex flexDir={'column'} maxW={'920px'} justifyContent={'center'} alignItems={'center'}>

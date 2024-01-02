@@ -15,7 +15,7 @@ function TopContent (props: {
   span?: string
 }) {
   const { content, tooltip, tooltip2, value, link, type, span } = props
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
   return (
     <Flex
       flexDir={'row'}

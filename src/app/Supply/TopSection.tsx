@@ -5,7 +5,7 @@ import Burnt from './components/Burnt';
 
 function TopSection (props: { type: string }) {
   const { type } = props
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
   
   return (
     <Flex

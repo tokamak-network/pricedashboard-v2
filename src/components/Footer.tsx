@@ -1,7 +1,7 @@
 import { Flex, SimpleGrid, Link, useMediaQuery } from "@chakra-ui/react";
 
 export default function Footer() {
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
   const contentHeader = [
     'About', 'Mainnet', 'L2 On-Demand', 'Ecosystem', 'Developers', 'Community'
   ]

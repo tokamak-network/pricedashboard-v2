@@ -4,7 +4,7 @@ import { useSupply } from '../../../hooks/useSupply';
 
 function Supply () {
   const { supplyContent } = useSupply();
-  const [isMobile] = useMediaQuery("(max-width: 1200px)");
+  const [isMobile] = useMediaQuery("(max-width: 920px)");
   
   return (
     <Flex
