@@ -1,4 +1,4 @@
-import { Flex, SimpleGrid, Link, useMediaQuery } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Link, useMediaQuery, Text } from "@chakra-ui/react";
 
 export default function Footer() {
   const [isMobile] = useMediaQuery("(max-width: 920px)");
@@ -153,7 +153,13 @@ export default function Footer() {
         mb={'31px'}
       >
         <Flex>
-          Copyright © 2023 Tokamak Network All Rights Reserved.
+          Copyright © 2023 
+          <Flex color={'#1c1c1c'} mx={'4px'}>Tokamak Network</Flex> 
+          {
+            isMobile ?
+            '' :
+            'All Rights Reserved.'
+          }
         </Flex>
       </Flex>
     </Flex>

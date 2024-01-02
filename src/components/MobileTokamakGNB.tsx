@@ -45,7 +45,8 @@ let deviceWidth = 0;
 if (typeof window !== "undefined") {
   deviceWidth = window.innerWidth;
 }
-
+console.log(NextArrowIcon)
+console.log(PrevArrowIcon)
 
 const toRightXvalue = () => {
   switch (currentPosition) {
@@ -203,7 +204,8 @@ function MobileTokamakGNB() {
             href={menu.url}
             key={menu.title}
             onTouchStart={(e) => catchTouchStart(e)}
-            onTouchEnd={(e) => handleNavigation(e)}>
+            onTouchEnd={(e) => handleNavigation(e)}
+          >
             {menu.title}
           </a>
         ))}
