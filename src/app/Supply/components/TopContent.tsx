@@ -68,7 +68,7 @@ function TopContent (props: {
         {value ? value.toLocaleString(undefined, {
           maximumFractionDigits: 0,
           minimumFractionDigits: 0
-        }) : '0.00'}
+        }) : '0'}
         {!type ? <Text ml={'3px'}>TON</Text> : ''}
         {
           link ? (

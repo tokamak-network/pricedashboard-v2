@@ -14,7 +14,7 @@ import {
   Link
 } from "@chakra-ui/react";
 import Image from "next/image";
-import LOGO from '@/assets/banner.png'
+import LOGO from '@/assets/Tokamak_transparent.png'
 import Burger_icon from "@/assets/Burger.svg";
 import { useRef, useState } from "react";
 import Burger_close_icon from "@/assets/Burger_close_icon.png";
@@ -34,12 +34,22 @@ function MobileHeader() {
       width="90%"
       px={'20px'}
     >
-      <Image 
-        src={LOGO} 
-        alt={"mobile logo"} 
-        height={30} 
-        width={204}
-      /> 
+      <Flex
+        // ml={'0px'}
+        justifyContent={'center'}
+        alignItems={'center'}
+      >
+        <Image width={40} src={LOGO} alt="" />
+        <Flex
+          fontSize={'16px'}
+          fontFamily={'Helvetica, sans-serif'}
+          fontWeight={'bold'}
+          ml={'7px'}
+          w={'150px'}
+        >
+          Tokamak Network Price Dashboard
+        </Flex>
+      </Flex> 
         <Flex
           height={30}
           bg="transparent"
