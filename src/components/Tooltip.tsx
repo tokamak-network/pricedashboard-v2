@@ -4,7 +4,6 @@ import {
   PlacementWithLogical,
   Text
 } from "@chakra-ui/react";
-
 import { QuestionOutlineIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 

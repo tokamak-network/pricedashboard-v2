@@ -2,6 +2,7 @@ import { Flex, Text, useMediaQuery } from "@chakra-ui/react"
 import Image from "next/image";
 
 import LINK_ICON from '@/assets/foreign.svg'
+import PREV from '@/assets/pagenate-prev-arrow-icon-inactive_1.svg';
 import Link from "next/link";
 import BasicTooltip from "@/components/Tooltip";
 

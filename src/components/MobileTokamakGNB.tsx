@@ -1,4 +1,5 @@
-import {Flex, Link, Image} from '@chakra-ui/react';
+import {Flex, Link} from '@chakra-ui/react';
+import Image from 'next/image';
 import PREV from '@/assets/pagenate-prev-arrow-icon-inactive_1.svg';
 import NextArrowIcon from '../assets/pagenate-prev-arrow-icon-inactive_2.svg';
 import '../css/gnb_mobile.css';
@@ -170,7 +171,7 @@ function MobileTokamakGNB() {
       <Image
         src={PREV}
         alt={''}
-        height={'40px'}
+        height={40}
         onClick={(e) => {
           handleNavigation(e, false);
         }}
@@ -206,14 +207,15 @@ function MobileTokamakGNB() {
           </a>
         ))}
       </div>
-      <img
+      <Image
         src={NextArrowIcon}
         alt={''}
-        width={'40px'}
-        height={'40px'}
+        width={40}
+        height={40}
         onClick={(e) => {
           handleNavigation(e, true);
-        }}></img>
+        }}
+      />
     </div>
   );
 }
