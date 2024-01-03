@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Header() {
   return (
     <Flex
-      w={'60%'}
+      w={'100%'}
       // minW={''}
       h={'80px'}
       bg={'#fff'}
@@ -73,7 +73,7 @@ export default function Header() {
           </Text>
         </Tooltip> */}
       </Flex>
-      
+      <Flex w={'200px'}/>
     </Flex>
   )
 }

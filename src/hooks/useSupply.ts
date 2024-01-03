@@ -89,8 +89,8 @@ export function useSupply () {
         },
         {
           content: "Circulating Supply",
-          tooltip2: "Circulating Supply = Total Supply - DAO Vault - Staked - Vested",
-          tooltip: "The amount of circulating TON in the market",
+          tooltip: "Circulating Supply = Total Supply - DAO Vault - Staked - Vested",
+          tooltip2: "The amount of circulating TON in the market",
           value: circulation.C1,
           link: "",
         },
