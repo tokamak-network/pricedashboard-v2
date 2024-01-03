@@ -32,7 +32,24 @@ function TopContent (props: {
         alignItems={'center'} 
         ml={isMobile ? '15px' :'27px'}
       >
-        <Image src={type === 'ton' ? TON_LOGO : TOS_LOGO} alt={""} width={isMobile? 44 : 72} />
+        <Flex
+          borderRadius={'225px'}
+          bgColor={'#fff'}
+          w={isMobile ? '50px' : '72px'}
+          h={isMobile ? '50px' : '72px'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          border={type === 'ton' ? '0.5px solid #DCDCDC' : '2px solid #DCDCDC'}
+        >
+          <Image 
+            src={type === 'ton' ? TON_LOGO : TOS_LOGO} 
+            alt={""} 
+            width={isMobile ? 
+              type === 'ton' ? 50 : 35 : 
+              type === 'ton' ? 72 : 50
+            } 
+          />
+        </Flex>
         <Flex ml={isMobile ? '8px' : '18px'} fontFamily={'Poppins, sans-serif'}>
           {type === 'ton' ? 'TON Price' : 'TOS Price'}
         </Flex>
