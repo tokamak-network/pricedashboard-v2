@@ -5,21 +5,22 @@ import Image from 'next/image'
 export default function Header() {
   return (
     <Flex
-      w={'100%'}
+      w={'90%'}
       // minW={''}
       h={'80px'}
       bg={'#fff'}
       color={'#1c1c1c'}
       fontSize={'16px'}
       fontWeight={600}
-      justifyContent={'space-between'}
+      justifyContent={'start'}
       // alignItems={'center'}
       flexDir={'row'}
     >
       <Flex
         ml={'11px'}
-        justifyContent={'center'}
+        justifyContent={'start'}
         alignItems={'center'}
+        w={'49%'}
       >
         <Image width={40} src={LOGO} alt="" />
         <Flex
@@ -73,7 +74,6 @@ export default function Header() {
           </Text>
         </Tooltip> */}
       </Flex>
-      <Flex w={'200px'}/>
     </Flex>
   )
 }
