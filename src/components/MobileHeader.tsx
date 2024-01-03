@@ -135,7 +135,8 @@ function MobileHeader() {
                   rel="noopener noreferrer"
                   href="https://tokamaknetwork.gitbook.io/home/03-information/buy-tos"
                   textDecor={'none'}
-                  color="#rgba(28, 28, 28, 0.50)"
+                  color="#1c1c1c"
+                  onClick={onClose}
                 >
                   <Flex
                     fontSize={"20px"}

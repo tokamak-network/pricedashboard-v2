@@ -54,7 +54,7 @@ export default function Header() {
           textDecor={'none'}
           color="#1c1c1c"
         >
-          Dune Dashboard
+          Buy TOS
         </Link>
         {/* <Tooltip 
           label={'Coming soon!'} 
