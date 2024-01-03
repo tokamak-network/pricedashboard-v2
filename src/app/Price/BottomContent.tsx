@@ -30,6 +30,7 @@ function BottomContent (props: {
         ml={'20px'} 
         alignItems={'center'}
         fontFamily={'Poppins, sans-serif'}
+        fontWeight={'bold'} 
       >
         <Text>{title}</Text>
       </Flex>
@@ -43,6 +44,8 @@ function BottomContent (props: {
       >
         <Flex
           fontSize={'18px'}
+          mb={'10px'}
+          fontWeight={'bold'}
         >
           {commafyWithUndefined(krw, 0)} KRW
         </Flex>

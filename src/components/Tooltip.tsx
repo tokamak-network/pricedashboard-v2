@@ -2,10 +2,12 @@ import {
   Tooltip,
   useColorMode,
   PlacementWithLogical,
-  Text
+  Text,
+  Flex
 } from "@chakra-ui/react";
 import { QuestionOutlineIcon } from "@chakra-ui/icons";
 import { useState } from "react";
+import '@fontsource/inter';
 
 type tooltipProps = {
   label: string | undefined;
@@ -23,21 +25,34 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
       display={label?.length === 0 ? "none" : "flex"}
       placement={placement ?? "top"}
       label={
-        <Text>
+        <Text
+          fontWeight={label2 ? 700 : ''}
+          color={'#000'}
+        >
           {label}
-          <br />
-          <br />
-          {label2}
+          {
+            label2 ?
+            <Flex fontWeight={400}>
+              <br />
+              <br />
+              {label2}
+            </Flex>
+            : ''
+          }
+          
         </Text>
       }
       bg={colorMode === "dark" ? "#1f2128" : "#fff"}
-      borderRadius={"3px"}
+      borderRadius={"10px"}
+      fontFamily={'Inter, sans-serif'}
       color={colorMode === "light" ? "#07070c" : "#8b8b93"}
-      fontSize="12px"
+      fontSize="14px"
       maxW={'200px'}
-      padding={'5px'}
+      padding={'20px'}
+      bgColor={'#fff'}
+      boxShadow={'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}
       isOpen={isLabelOpen}
-      border={colorMode === "light" ? "solid 1px #e8edf2" : "solid 1px #313442"}
+      border={'0px'}
     >
       <QuestionOutlineIcon
         display={label?.length === 0 ? "none" : ""}
