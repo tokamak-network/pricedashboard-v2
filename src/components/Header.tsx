@@ -40,23 +40,23 @@ export default function Header() {
         <Link 
           target="_blank"
           rel="noopener noreferrer"
-          href="https://upbit.com/exchange?code=CRIX.UPBIT.KRW-TON"
+          href="https://tokamaknetwork.gitbook.io/home/03-information/buy-ton"
           textDecor={'none'}
           color="#1c1c1c"
           mr={'40px'}
         >
           Buy TON
         </Link>
-        {/* <Link 
+        <Link 
           target="_blank"
           rel="noopener noreferrer"
-          href=""
+          href="https://tokamaknetwork.gitbook.io/home/03-information/buy-tos"
           textDecor={'none'}
-          color="#rgba(28, 28, 28, 0.50)"
+          color="#1c1c1c"
         >
           Dune Dashboard
-        </Link> */}
-        <Tooltip 
+        </Link>
+        {/* <Tooltip 
           label={'Coming soon!'} 
           placement={'auto'}
           hasArrow arrowSize={15}
@@ -71,7 +71,7 @@ export default function Header() {
           >
             Dune Dashboard
           </Text>
-        </Tooltip>
+        </Tooltip> */}
       </Flex>
       
     </Flex>

@@ -43,7 +43,7 @@ export function useSupplyBottom () {
       setCirculSupply([
         {
           title: "C1",
-          tooltip: "C1 = Total Supply - Vested - DAO Vault - Staked ",
+          tooltip: "C1 = Total Supply - DAO Vault - Staked - Vested",
           tooltip2: "A supply measure that indicates TON that is immediately accessible for conversion to cash without any restrictions from staking, vesting, or DAO constraints",
           value: C1,
           dollor: C1 * tonPriceUSD,

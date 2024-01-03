@@ -111,7 +111,7 @@ function MobileHeader() {
                 <Link 
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://upbit.com/exchange?code=CRIX.UPBIT.KRW-TON"
+                  href="https://tokamaknetwork.gitbook.io/home/03-information/buy-ton"
                   textDecor={'none'}
                   color="#1c1c1c"
                   onClick={onClose}
@@ -130,16 +130,27 @@ function MobileHeader() {
                     Buy TON
                   </Flex>
                 </Link>
-                {/* <Link 
+                <Link 
                   target="_blank"
                   rel="noopener noreferrer"
-                  href=""
+                  href="https://tokamaknetwork.gitbook.io/home/03-information/buy-tos"
                   textDecor={'none'}
                   color="#rgba(28, 28, 28, 0.50)"
                 >
-                  Dune Dashboard
-                </Link> */}
-                <Tooltip 
+                  <Flex
+                    fontSize={"20px"}
+                    fontWeight={600}
+                    mb="30px"
+                    textDecor={'none'}
+                    color={"#3e495c"}
+                    cursor={"pointer"}
+                    onMouseEnter={() => setIsHover(0)}
+                    onMouseLeave={() => setIsHover(undefined)}
+                  >
+                    Buy TOS
+                  </Flex>
+                </Link>
+                {/* <Tooltip 
                   label={'Coming soon!'} 
                   placement={'auto'}
                   hasArrow arrowSize={15}
@@ -159,7 +170,7 @@ function MobileHeader() {
                   >
                     Dune Dashboard
                   </Text>
-                </Tooltip>
+                </Tooltip> */}
               </Flex>
             </DrawerBody>
           </DrawerContent>

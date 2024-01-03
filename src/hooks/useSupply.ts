@@ -89,7 +89,7 @@ export function useSupply () {
         },
         {
           content: "Circulating Supply",
-          tooltip: "TON Circulating Supply = Total Supply - Vested - DAO Vault - Staked",
+          tooltip: "Circulating Supply = Total Supply - DAO Vault - Staked - Vested",
           tooltip2: "The amount of circulating TON in the market",
           value: circulation.C1,
           link: "",
@@ -97,6 +97,7 @@ export function useSupply () {
         {
           content: "Circulating Supply (Upbit Standard)",
           tooltip: "The circulating supply, calculated by following Upbit’s criteria, factors in staked WTON, considering it available rather than locked.",
+          tooltip2: "Circulating Supply (Upbit Standard) = Total Supply - DAO Vault - Vested",
           value: circulation.totalCirculationSupply,
           link: "",
         },
@@ -109,14 +110,14 @@ export function useSupply () {
         },
         {
           content: "FDV",
-          tooltip: "FDV = Total Supply * Price per TON",
+          tooltip: "Fully Diluted Valuation = Total Supply * Price per TON",
           value: +totalSupply * tonPriceUSD,
           link: "",
           type: "usd"
         },
         {
           content: "Uniswap TVL",
-          tooltip: "Pools considered for the calculation:  DOC-TOS, TOS-ETH, ETH-WTON, TOS-WTON, TOS-AURA, DOC-ETH, TOS-LYDA",
+          tooltip: "Uniswap V3 Pools considered for the calculation:  DOC-TOS, TOS-ETH, ETH-WTON, TOS-WTON, TOS-AURA, DOC-ETH, TOS-LYDA",
           value: tvl,
           link: "",
           type: "usd"
@@ -126,7 +127,7 @@ export function useSupply () {
           tooltip: "The total TON that has been burned to date.",
           value: supply.burnedValue,
           link: "https://etherscan.io/token/0x2be5e8c109e2197D077D13A82dAead6a9b3433C5?a=0x0000000000000000000000000000000000000001",
-          span: '††'
+          span: ''
         },
       ])
     }
