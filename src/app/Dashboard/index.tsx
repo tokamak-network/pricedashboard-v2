@@ -30,6 +30,9 @@ export default function Dashboard () {
           color={selected === 'price' ? '#333' : '#B2C1D2'}
           cursor={'pointer'}
           onClick={() => setSelected('price')}
+          _hover={{
+            color: '#333'
+          }}
         >
           PRICE
         </Flex>
