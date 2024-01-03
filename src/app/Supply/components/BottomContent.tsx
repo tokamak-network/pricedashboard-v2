@@ -29,10 +29,12 @@ function BottomContent (props: {
         h={'20px'}
         fontFamily={'Poppins, sans-serif'}
         alignItems={'center'}
-        w={'43px'}
-        justifyContent={'space-between'}
+        // w={'43px'}
+        // justifyContent={'space-between'}
       >
-        {title}
+        <Flex mr={'3px'}>
+          {title}
+        </Flex>
         <BasicTooltip 
           label={tooltip}
           label2={tooltip2}

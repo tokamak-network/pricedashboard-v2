@@ -43,22 +43,22 @@ export function useSupplyBottom () {
       setCirculSupply([
         {
           title: "C1",
-          tooltip: "C1 = Total Supply - DAO Vault - Staked - Vested",
-          tooltip2: "A supply measure that indicates TON that is immediately accessible for conversion to cash without any restrictions from staking, vesting, or DAO constraints",
+          tooltip2: "C1 = Total Supply - DAO Vault - Staked - Vested",
+          tooltip: "A supply measure that indicates TON that is immediately accessible for conversion to cash without any restrictions from staking, vesting, or DAO constraints",
           value: C1,
           dollor: C1 * tonPriceUSD,
         },
         {
           title: "C2",
-          tooltip: "C2 = C1 + Staked + Vested - TONStarter Mining",
-          tooltip2: "A supply measure considering short term locked TON(< 3 months).This supply metric considers staked (excluding TONStarter Staking) and vested TON, excluding DAO-locked TON, which remains locked indefinitely. TONStarter mining = 1,731,048 TON",
+          tooltip2: "C2 = C1 + Staked + Vested - TONStarter Mining",
+          tooltip: "A supply measure considering short term locked TON(< 3 months).This supply metric considers staked (excluding TONStarter Staking) and vested TON, excluding DAO-locked TON, which remains locked indefinitely. TONStarter mining = 1,731,048 TON",
           value: C1 + C2,
           dollor: (C1 + C2) * tonPriceUSD,
         },
         {
           title: "C3",
-          tooltip: "C3 = C2 + TONStarter mining",
-          tooltip2: "A supply measure considering a relatively long term locked TON (<1 year) than C2. On 15 July 2024, both C3 and C2 becomes equal since it marks the end of TONStarter mining (1,731,048 TON).",
+          tooltip2: "C3 = C2 + TONStarter mining",
+          tooltip: "A supply measure considering a relatively long term locked TON (<1 year) than C2. On 15 July 2024, both C3 and C2 becomes equal since it marks the end of TONStarter mining (1,731,048 TON).",
           value: C1 + C2 + C3,
           dollor: (C1 + C2 + C3) * tonPriceUSD,
         },
