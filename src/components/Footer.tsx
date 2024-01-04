@@ -80,7 +80,7 @@ export default function Footer() {
         link: 'https://medium.com/onther-tech'
       },
       {
-        title: 'Twitter',
+        title: 'X',
         link: 'https://twitter.com/tokamak_network'
       },
       {
@@ -157,7 +157,7 @@ export default function Footer() {
         mb={'31px'}
       >
         <Flex>
-          Copyright © 2023 
+          Copyright © 2024 
           <Flex color={'#1c1c1c'} mx={'4px'}>Tokamak Network</Flex> 
           {
             isMobile ?
