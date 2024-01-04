@@ -28,22 +28,22 @@ export default function Price () {
       </Flex>
       <Flex flexDir={isMobile ? 'column' : 'row'} justifyContent={'space-between'} w={'100%'}>
         <BottomContent 
-          title={'OPENING PRICE'}
+          title={'24H OPENING PRICE'}
           krw={openingPrice}
           usd={openingPrice * USD}
         />
         <BottomContent 
-          title={'CLOSING PRICE'}
+          title={'24H CLOSING PRICE'}
           krw={closingPrice}
           usd={closingPrice * USD}
         />
         <BottomContent 
-          title={'HIGH PRICE'}
+          title={'24H HIGH PRICE'}
           krw={highPrice}
           usd={highPrice * USD}
         />
         <BottomContent 
-          title={'LOW PRICE'}
+          title={'24H LOW PRICE'}
           krw={lowPrice}
           usd={lowPrice * USD}
         />

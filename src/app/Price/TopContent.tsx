@@ -56,14 +56,14 @@ function TopContent (props: {
       </Flex>
       <Flex flexDir={'column'} alignItems={'end'} mr={'27px'}>
         <Flex>
-          {krw.toLocaleString(undefined, {maximumFractionDigits:0})} KRW
+          ${usd.toLocaleString(undefined, {maximumFractionDigits:2})} USD
         </Flex>
         <Flex
           fontSize={isMobile? '16px' : '18px'}
           fontWeight={300}
           mt={'6px'}
         >
-          (${usd.toLocaleString(undefined, {maximumFractionDigits:2})} USD)
+          ({krw.toLocaleString(undefined, {maximumFractionDigits:0})} KRW)
         </Flex>
       </Flex>
     </Flex>

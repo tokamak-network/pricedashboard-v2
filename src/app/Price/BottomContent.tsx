@@ -30,9 +30,9 @@ function BottomContent (props: {
         ml={'20px'} 
         alignItems={'center'}
         fontFamily={'Poppins, sans-serif'}
-        fontWeight={'bold'} 
+        // fontWeight={600} 
       >
-        <Text>{title}</Text>
+        <Text fontWeight={700}>{title}</Text>
       </Flex>
       <Flex
         alignItems={'center'}
@@ -47,12 +47,12 @@ function BottomContent (props: {
           mb={'10px'}
           fontWeight={'bold'}
         >
-          {commafyWithUndefined(krw, 0)} KRW
+          ${usd.toLocaleString(undefined, {maximumFractionDigits: 2})} USD
         </Flex>
         <Flex
           fontWeight={300}
         >
-          (${usd.toLocaleString(undefined, {maximumFractionDigits: 2})} USD)
+          ({commafyWithUndefined(krw, 0)} KRW)
         </Flex>
       </Flex>
     </Flex>
