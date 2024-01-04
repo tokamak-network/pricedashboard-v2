@@ -22,7 +22,7 @@ export default function Footer() {
     ],
     Mainnet: [
       {
-        title: 'Darius',
+        title: 'Titan',
         link: 'http://titan.tokamak.network/'
       },
     ],
@@ -55,6 +55,10 @@ export default function Footer() {
         title: 'Launchpad',
         link: 'https://tonstarter.tokamak.network/'
       },
+      {
+        title: 'Block Explorer',
+        link: 'https://explorer.titan.tokamak.network/'
+      }
     ],
     'Developers': [
       {
