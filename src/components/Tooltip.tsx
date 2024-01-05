@@ -26,49 +26,53 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
   }
   const pools = [
     {
-      pool: 'DOC-TOS',
+      pool: 'DOC / TOS',
       link: 'https://info.uniswap.org/#/pools/0x369bca127b8858108536b71528ab3befa1deb6fc'
     }, 
     {
-      pool:'TOS-ETH',
+      pool:'TOS / ETH',
       link: 'https://info.uniswap.org/#/pools/0x2ad99c938471770da0cd60e08eaf29ebff67a92a'
     }, 
     {
-      pool: 'ETH-WTON',
+      pool: 'ETH / WTON',
       link: 'https://info.uniswap.org/#/pools/0xc29271e3a68a7647fd1399298ef18feca3879f59'
     }, {
-      pool: 'TOS-WTON',
+      pool: 'TOS / WTON',
       link: 'https://info.uniswap.org/#/pools/0x1c0ce9aaa0c12f53df3b4d8d77b82d6ad343b4e4'
     }, 
     {
-      pool: 'TOS-AURA',
+      pool: 'TOS / AURA',
       link: 'https://info.uniswap.org/#/pools/0xbddd3a50bd2afd27aed05cc9fe1c8d67fcaa3218'
     }, 
     {
-      pool: 'DOC-ETH',
+      pool: 'DOC / ETH',
       link: ' https://info.uniswap.org/#/pools/0xda3cc73170aa5bb7c0a9588e7690299df568d53d'
     }, 
     {
-      pool: 'TOS-LYDA',
+      pool: 'TOS / LYDA',
       link: 'https://info.uniswap.org/#/pools/0x3ae1e82f20c134867514ecd1e615856b312fb685'
     }
   ]
   const poolLink = () => {
     return (
-      pools.map((props: any, index: number) => {
-        return (
-          <Link
-            href={props.link}
-            // textDecoration={'none'}
-            rel="noopener noreferrer" target="_blank" 
-            mr={'3px'}
-            color={'#000'}
-            cursor={'pointer'}
-          >
-            {props.pool}
-          </Link>
-        )
-      })
+      <Flex flexDir={'column'}>
+        {
+          pools.map((props: any, index: number) => {
+            return (
+              <Link
+                href={props.link}
+                // textDecoration={'none'}
+                rel="noopener noreferrer" target="_blank" 
+                mr={'3px'}
+                // color={'#000'}
+                cursor={'pointer'}
+              >
+                {index + 1}{ '. ' }{props.pool}
+              </Link>
+            )
+          })
+        }
+      </Flex>
     )
   }
   return (
@@ -81,7 +85,18 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
           fontWeight={label2 ? 700 : ''}
           color={'#000'}
         >
-          { label } {types === 'uniswap'? poolLink() : ''}
+          { label } 
+          {
+            types === 'uniswap'? poolLink() :
+            types === 'total' ? 
+              <Link 
+                href={'https://github.com/tokamak-network/ton-total-supply'} 
+                rel="noopener noreferrer" 
+                target="_blank" 
+              > 
+                repository.
+              </Link> : ''
+          }
           {
             label2 ?
             <Flex fontWeight={400}>

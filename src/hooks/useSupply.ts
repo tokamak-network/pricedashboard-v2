@@ -84,10 +84,11 @@ export function useSupply () {
       setSupplyContent([
         {
           content: "Total Supply",
-          tooltip: "The cumulative TON generated until the present ethereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage.",
+          tooltip: "The cumulative TON generated until the present Ethereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage. The number shown represents the upper limit. To obtain the real-time precise total supply, you may refer to the code available on this ",
           value: totalSupply,
           link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract#F64",
-          span: '†'
+          span: '†',
+          types: 'total'
         },
         {
           content: "Circulating Supply",
