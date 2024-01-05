@@ -61,10 +61,10 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
             return (
               <Link
                 href={props.link}
-                // textDecoration={'none'}
+                textDecoration={'none'}
                 rel="noopener noreferrer" target="_blank" 
                 mr={'3px'}
-                // color={'#000'}
+                color={'#007AFF'}
                 cursor={'pointer'}
               >
                 {index + 1}{ '. ' }{props.pool}
@@ -92,7 +92,9 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
               <Link 
                 href={'https://github.com/tokamak-network/ton-total-supply'} 
                 rel="noopener noreferrer" 
-                target="_blank" 
+                target="_blank"
+                textDecor={'none'}
+                color={'#007AFF'}
               > 
                 repository.
               </Link> : ''
@@ -126,8 +128,13 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
         h={"14px"}
         w={"14px"}
         color={'#333'}
-        onMouseLeave={() => types === 'uniswap' ? '' : setIsLabelOpen(false)}
-        onMouseEnter={() => types === 'uniswap' ? '' : setIsLabelOpen(true)}
+        onMouseLeave={
+          () => types === 'uniswap' || types === 'total' ? 
+            '' : setIsLabelOpen(false)
+        }
+        onMouseEnter={
+          () => types === 'uniswap' || types === 'total' ? 
+            '' : setIsLabelOpen(true)}
         onClick={() => tooltipControl()}
       />
     </Tooltip>
