@@ -15,8 +15,9 @@ function TopContent (props: {
   link?: string
   type?: string
   span?: string
+  types?: string
 }) {
-  const { content, tooltip, tooltip2, value, link, type, span } = props
+  const { content, tooltip, tooltip2, value, link, type, span, types } = props
   const [isMobile] = useMediaQuery("(max-width: 920px)");
   return (
     <Flex
@@ -58,6 +59,7 @@ function TopContent (props: {
           <BasicTooltip 
             label={tooltip}
             label2={tooltip2}
+            types={types}
           />
         </Flex>
       </Flex>

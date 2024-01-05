@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from '@chakra-ui/react'
 import { 
   getTotalSupply, 
   getCirculateSupply,
@@ -16,6 +17,7 @@ type SupplyValueProps = {
   link?: string
   type?: string
   span?: string
+  types? : string
 }
 
 export function useSupply () {
@@ -117,10 +119,11 @@ export function useSupply () {
         },
         {
           content: "Uniswap TVL",
-          tooltip: "Uniswap V3 Pools considered for the calculation:  DOC-TOS, TOS-ETH, ETH-WTON, TOS-WTON, TOS-AURA, DOC-ETH, TOS-LYDA",
+          tooltip: "Uniswap V3 Pools considered for the calculation:  ",
           value: tvl,
           link: "",
-          type: "usd"
+          type: "usd",
+          types: "uniswap"
         },
         {
           content: "Burned",
