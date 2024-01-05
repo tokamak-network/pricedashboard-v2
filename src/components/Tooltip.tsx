@@ -105,15 +105,14 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
       boxShadow={'0px 4px 4px 0px rgba(0, 0, 0, 0.25)'}
       isOpen={isLabelOpen}
       border={'0px'}
-      // onMouseLeave={() => setIsLabelOpen(false)}
-      // onMouseEnter={() => setIsLabelOpen(true)}
     >
       <QuestionOutlineIcon
         display={label?.length === 0 ? "none" : ""}
         h={"14px"}
         w={"14px"}
         color={'#333'}
-        // onMouseMoveCapture={()=> setIsLabelOpen(false)}
+        onMouseLeave={() => types === 'uniswap' ? '' : setIsLabelOpen(false)}
+        onMouseEnter={() => types === 'uniswap' ? '' : setIsLabelOpen(true)}
         onClick={() => tooltipControl()}
       />
     </Tooltip>
