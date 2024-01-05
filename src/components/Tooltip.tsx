@@ -57,7 +57,7 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
   ]
   const poolLink = () => {
     return (
-      <Flex flexDir={'column'}>
+      <Flex flexDir={'column'} mt={'10px'}>
         {
           pools.map((props: any, index: number) => {
             return (
@@ -65,11 +65,16 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
                 href={props.link}
                 textDecoration={'none'}
                 rel="noopener noreferrer" target="_blank" 
-                mr={'3px'}
+                mt={'1px'}
                 color={'#007AFF'}
                 cursor={'pointer'}
               >
-                {index + 1}{ '. ' }{props.pool}
+                <Flex flexDir={'row'}>
+                  <Flex color='#000' mr={'4px'}>
+                    {index + 1}{ '. ' }
+                  </Flex>
+                  {props.pool}
+                </Flex>
               </Link>
             )
           })
