@@ -31,7 +31,7 @@ function TopSection (props: { type: string }) {
       justifyContent={'start'}
     >
       <SectionTitle 
-        title={ type === 'supply' ? 'TON TOKEN SUPPLY' : 'TON LOCKED'}
+        title={ type === 'supply' ? 'TON SUPPLY' : 'TON LOCKED'}
       />
       <Flex
         // mt={'28px'}
