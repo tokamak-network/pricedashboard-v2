@@ -38,6 +38,7 @@ export function useSupplyBottom () {
   useEffect(() => {
     async function fetch() {
       const circulation = await getCirculationSupply();
+      console.log(circulation)
       const { C1, C2, C3 } = circulation
 
       setCirculSupply([
@@ -59,8 +60,8 @@ export function useSupplyBottom () {
           title: "C3",
           tooltip: "C3 = C2 + TONStarter mining",
           tooltip2: "A supply measure considering a relatively long term locked TON (<1 year) than C2. On 15 July 2024, both C3 and C2 becomes equal since it marks the end of TONStarter mining (1,731,048 TON).",
-          value: C1 + C2 + C3,
-          dollor: (C1 + C2 + C3) * tonPriceUSD,
+          value: circulation.totalCirculationSupply,
+          dollor: (circulation.totalCirculationSupply) * tonPriceUSD,
         },
       ])
     }

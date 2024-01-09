@@ -80,7 +80,7 @@ export function useSupply () {
       const circulation = await getCirculationSupply();
       const tvl = await getTVL();
       const supply = await getSupply();
-      
+      console.log(circulatedSupply)
       setSupplyContent([
         {
           content: "Total Supply",
