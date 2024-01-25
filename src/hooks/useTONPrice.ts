@@ -16,6 +16,7 @@ export function useTONPrice () {
       setTonPriceUSD(tonUSD)
     }
     fetch()
-  }, [tonPriceKRW])
+    setInterval(() => fetch(), 60000)
+  }, [tonPriceKRW, tonPriceUSD])
   return { tonPriceUSD, tonPriceKRW }
 }
