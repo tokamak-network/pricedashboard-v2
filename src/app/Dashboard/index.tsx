@@ -2,7 +2,12 @@ import { Flex } from "@chakra-ui/layout";
 import { useState } from "react";
 import Price from "../Price";
 import Supply from "../Supply";
-import { useMediaQuery } from "@chakra-ui/react";
+import { Link, useMediaQuery } from "@chakra-ui/react";
+import DUNE_LOGO from '@/assets/dune-logo.png'
+import DUNE from '@/assets/dune.png'
+import Image from "next/image";
+import LINK_ICON from '@/assets/foreign.svg'
+
 
 
 export default function Dashboard () {
@@ -68,12 +73,48 @@ export default function Dashboard () {
           <Price /> :
           <Supply />
         }
-        <Flex mt={selected === 'price' ? '124px' : '64px'} flexDir={isMobile ? 'column' :'row'} fontSize={'20px'} mb={'100px'}>
-          <Flex fontWeight={300} mr={'5px'}>
-            Dune Dashboard:
-          </Flex>
-          <Flex fontWeight={600}>
-            Coming Soon !!
+        <Flex 
+          mt={isMobile ? '40px' : '84px'} 
+          flexDir={isMobile ? 'column' :'row'} 
+          fontSize={'20px'} 
+          mb={'100px'}
+          w={isMobile ? '330px' : '920px'}
+          h={isMobile ? '200px' : '261px'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          borderRadius={'8px'}
+          bgColor={'rgba(233, 236, 251, 0.8)'}
+          backdropFilter={'blur(10px)'}
+        >
+          <Flex
+            bgSize={920}
+            zIndex={1}
+            justifyContent={'center'} 
+            flexDir={isMobile ? 'column' : 'row'}  
+            alignItems={'center'}
+            
+          >
+            <Flex 
+              opacity={0.1} 
+              backdropFilter={'blur(10px)'}
+              position={'absolute'}
+              w={isMobile ? '330px' : '920px'}
+              h={isMobile ? '200px' : '261px'}
+              bgImage={"url('./dune.png')"} 
+              bgPosition={'center; *strikethrough*'}
+              bgSize={920}
+            />
+            <Image src={DUNE_LOGO} alt={''} width={25} />
+            <Flex mx={'10px'} fontWeight={600} textAlign={'center'} opacity={1}>
+              Dune - Tokamak Network Tokenomics Dashboard
+            </Flex>
+            <Link 
+              href={'https://dune.com/tokamak-network/tokamak-network-tokenomics-dashboard'}
+              rel="noopener noreferrer" target="_blank"
+            >
+              <Image src={LINK_ICON} alt="" />
+            </Link>
+            
           </Flex>
         </Flex>
       </Flex>

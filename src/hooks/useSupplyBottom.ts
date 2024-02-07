@@ -38,7 +38,6 @@ export function useSupplyBottom () {
   useEffect(() => {
     async function fetch() {
       const circulation = await getCirculationSupply();
-      console.log(circulation)
       const { C1, C2, C3 } = circulation
 
       setCirculSupply([
