@@ -109,6 +109,7 @@ export default function Dashboard () {
               Dune - Tokamak Network Tokenomics Dashboard
             </Flex>
             <Link 
+              zIndex={3}
               href={'https://dune.com/tokamak-network/tokamak-network-tokenomics-dashboard'}
               rel="noopener noreferrer" target="_blank"
             >
