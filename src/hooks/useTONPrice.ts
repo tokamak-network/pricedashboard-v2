@@ -1,22 +1,27 @@
-import { getTONPrice, getUSDInfo } from '@/api';
-import { useState, useEffect } from 'react';
+import { getTONPrice } from '@/api'
+import { useQuery } from '@tanstack/react-query'
+import { useKrwPrice } from './useKrwPrice'
 
-export function useTONPrice () {
-  const [tonPriceUSD, setTonPriceUSD] = useState(0)
-  const [tonPriceKRW, setTonPriceKRW] = useState(0)
+export function useTONPrice() {
+  const { data: krwPrice } = useKrwPrice()
+  const { data: tonPrice } = useQuery({
+    queryKey: ['tonPrice'],
+    queryFn: async () => {
+      return await getTONPrice()
+    },
+    refetchInterval: 1000 * 5,
+    enabled: !!krwPrice,
+    initialData: { tradePrice: 0, highPrice: 0, lowPrice: 0, openingPrice: 0, closingPrice: 0 },
+    select: (data) => {
+      return {
+        tonPriceKRW: data?.trade_price ?? 0,
+        highPrice: data?.high_price ?? 0,
+        lowPrice: data?.low_price ?? 0,
+        openingPrice: data?.opening_price ?? 0,
+        closingPrice: data?.trade_price ?? 0,
+      }
+    },
+  })
 
-  useEffect(() => {
-    async function fetch () {
-      const tonKRW = await getTONPrice()
-      const krwUSD = await getUSDInfo()
-
-      const tonUSD = tonKRW.trade_price * krwUSD
-
-      setTonPriceKRW(tonKRW.trade_price)
-      setTonPriceUSD(tonUSD)
-    }
-    fetch()
-    setInterval(() => fetch(), 60000)
-  }, [tonPriceKRW, tonPriceUSD])
-  return { tonPriceUSD, tonPriceKRW }
+  return { ...tonPrice, krwPrice, tonPriceUSD: tonPrice.tonPriceKRW * (krwPrice ?? 0) }
 }

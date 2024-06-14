@@ -1,21 +1,18 @@
-import { getTosPrice, getUSDInfo } from '@/api';
-import { useState, useEffect } from 'react';
+import { getTosPrice } from '@/api'
+import { useQuery } from '@tanstack/react-query'
+import { useKrwPrice } from './useKrwPrice'
 
-export function useTOSPrice () {
-  const [tosPriceUSD, setTosPriceUSD] = useState(0)
-  const [tosPriceKRW, setTosPriceKRW] = useState(0)
+export function useTOSPrice() {
+  const { data: krwPrice } = useKrwPrice()
+  const { data: tosPriceUSD } = useQuery({
+    queryKey: ['tosPrice'],
+    queryFn: async () => {
+      return await getTosPrice()
+    },
+    refetchInterval: 1000 * 5,
+    enabled: !!krwPrice,
+    initialData: 0,
+  })
 
-  useEffect(() => {
-    async function fetch () {
-      const tosUSD = await getTosPrice()
-      const krwUSD = await getUSDInfo()
-
-      const tosKRW = tosUSD / krwUSD
-      
-      setTosPriceKRW(tosKRW)
-      setTosPriceUSD(tosUSD)
-    }
-    fetch()
-  }, [tosPriceKRW])
-  return { tosPriceUSD, tosPriceKRW }
+  return { tosPriceUSD, tosPriceKRW: tosPriceUSD / krwPrice }
 }
