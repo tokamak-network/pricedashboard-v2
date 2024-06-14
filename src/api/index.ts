@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { API } from '@/constants';
-// import { ethers } from 'ethers';
 import { formatUnits } from 'ethers';
 
 function createInstatnceCandidate () {
