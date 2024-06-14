@@ -68,6 +68,7 @@ const BasicTooltip: React.FC<tooltipProps> = (props) => {
                 mt={'1px'}
                 color={'#007AFF'}
                 cursor={'pointer'}
+                key={index}
               >
                 <Flex flexDir={'row'}>
                   <Flex color='#000' mr={'4px'}>
