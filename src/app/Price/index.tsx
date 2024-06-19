@@ -1,15 +1,13 @@
 import { Flex } from "@chakra-ui/layout";
-import TopContent from "./TopContent";
-import { useTONPrice } from '../../hooks/useTONPrice';
-import BottomContent from "./BottomContent";
-import { useTOSPrice } from '../../hooks/useTOSPrice';
-import { useTONTradeInfo } from '../../hooks/useTONTradeInfo';
 import { useMediaQuery } from "@chakra-ui/react";
+import { useTONPrice } from '../../hooks/useTONPrice';
+import { useTOSPrice } from '../../hooks/useTOSPrice';
+import BottomContent from "./BottomContent";
+import TopContent from "./TopContent";
 
 export default function Price () {
-  const { tonPriceKRW, tonPriceUSD } = useTONPrice();
+  const { tonPriceKRW, tonPriceUSD, highPrice, lowPrice, openingPrice, closingPrice, krwPrice } = useTONPrice();
   const { tosPriceKRW, tosPriceUSD } = useTOSPrice()
-  const { highPrice, lowPrice, openingPrice, closingPrice, USD } = useTONTradeInfo();
   const [isMobile] = useMediaQuery("(max-width: 920px)");
  
   return (
@@ -30,22 +28,22 @@ export default function Price () {
         <BottomContent 
           title={'24H OPENING PRICE'}
           krw={openingPrice}
-          usd={openingPrice * USD}
+          usd={openingPrice * krwPrice}
         />
         <BottomContent 
           title={'24H CLOSING PRICE'}
           krw={closingPrice}
-          usd={closingPrice * USD}
+          usd={closingPrice * krwPrice}
         />
         <BottomContent 
           title={'24H HIGH PRICE'}
           krw={highPrice}
-          usd={highPrice * USD}
+          usd={highPrice * krwPrice}
         />
         <BottomContent 
           title={'24H LOW PRICE'}
           krw={lowPrice}
-          usd={lowPrice * USD}
+          usd={lowPrice * krwPrice}
         />
       </Flex>
     </Flex>

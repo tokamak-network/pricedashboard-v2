@@ -1,6 +1,5 @@
-import axios from 'axios';
 import { API } from '@/constants';
-// import { ethers } from 'ethers';
+import axios from 'axios';
 import { formatUnits } from 'ethers';
 
 function createInstatnceCandidate () {
@@ -12,33 +11,31 @@ function createInstatnceCandidate () {
 const api = createInstatnceCandidate();
 
 export async function getTotalSupply() {
-  const res = await api.get('/totalsupply')
-  return res.data ? res.data : '';
+  return (await api.get('/totalsupply'))?.data ?? '';
 }
 
 export async function getCirculateSupply() {
-  const res = await api.get('/circulatedcoins')
-  return res.data ? res.data : '';
+  return (await api.get('/circulatedcoins'))?.data ?? '';
 }
 
 export async function getTotalStaked() {
-  const res = await api.get('/staking/current');
-  return res.data;  
+  return (await api.get('/staking/current'))?.data;
 }
 
 export async function getTosPrice() {
-  const res = await api.get('/tosprice');
-  return res.data
+  return (await api.get('/tosprice'))?.data;
 }
 
 export async function getCirculationSupply () {
-  const res = await api.get('/circulationSupply')
-  return res.data
+  return (await api.get('/circulationSupply'))?.data;
 }
 
 export async function getSupply () {
-  const res = await api.get('/supply')
-  return res.data
+  return (await api.get('/supply'))?.data;
+}
+
+export async function getTVL () {
+  return (await api.get('/tvl'))?.data?.tvl;
 }
 
 export async function getStakedData() {
@@ -57,9 +54,4 @@ export async function getTONPrice() {
 export async function getUSDInfo() {
   const res = await axios.get('https://api.frankfurter.app/latest?from=KRW')
   return res.data.rates.USD
-}
-
-export async function getTVL () {
-  const res = await api.get('/tvl')
-  return res.data.tvl
 }
