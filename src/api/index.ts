@@ -20,7 +20,7 @@ export async function getCirculateSupply() {
 
 export async function getTotalStaked() {
   const subgraphURL =
-    "https://api.thegraph.com/subgraphs/name/cd4761/staking-v1-subgraph";
+    "https://api.studio.thegraph.com/query/77344/staking-v1-subgraph/version/latest";
   const query = `
   {
   factories(first: 5) {
@@ -41,8 +41,7 @@ export async function getTotalStaked() {
   });
 
   const data = await response.json();
-
-  const stakeTotal = data?.factories[0].totalStaked;
+  const stakeTotal = data?.data?.factories[0].totalStaked;
   const totalStake = parseFloat(stakeTotal) / Math.pow(10, 27);
   return totalStake;
 
