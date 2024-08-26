@@ -49,17 +49,8 @@ function TopSection(props: { type: string }) {
                 mb="15px"
                 alignItems={"baseline"}
               >
-                <Link
-                  mr={"5px"}
-                  href={
-                    "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract#F59"
-                  }
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <Image src={LINK_ICON} alt="" />
-                </Link>
-                <Text m={0}>
+                <Image src={LINK_ICON} alt="" />
+                <Text m={0} ml={"5px"}>
                   Verify this value on Etherscan. In case of discrepancies,
                   Etherscan's value is considered accurate.
                 </Text>
