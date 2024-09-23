@@ -63,9 +63,9 @@ export default function Dashboard () {
         bgColor={'#F7F8FD'} 
         // maxW={'920px'} 
         w={'100%'}
-        minH={'610px'} 
+        minH={'810px'} 
         alignItems={'center'}
-        justifyContent={selected === 'price' && !isMobile ? 'center' :'start'}
+        justifyContent={!isMobile ? 'center' :'start'}
         flexDir={selected === 'price' && !isMobile ? 'row' : 'column'}
       >
         {
@@ -73,70 +73,74 @@ export default function Dashboard () {
           <Price /> :
           <Supply />
         }
-        <Flex 
-          mt={isMobile ? '40px' : selected === 'price' ? '100px' : '84px'} 
-          ml={selected === 'price' && !isMobile ? '20px' : ''}
-          flexDir={isMobile ? 'column' :'row'} 
-          fontSize={'20px'} 
-          mb={'100px'}
-          w={isMobile ? '330px' : selected === 'price' ? '463px' : '920px'}
-          h={isMobile ? '200px' : selected === 'price' ? '296px' : '261px'}
-          justifyContent={'center'}
-          alignItems={'center'}
-          borderRadius={'8px'}
-          bgColor={'rgba(233, 236, 251, 0.8)'}
-          backdropFilter={'blur(10px)'}
-        >
-          <Flex
-            bgSize={920}
-            zIndex={1}
-            justifyContent={'center'} 
-            flexDir={isMobile ? 'column' : 'row'}  
+        {
+          selected === 'price' ?
+          <Flex 
+            mt={isMobile ? '40px' : selected === 'price' ? '100px' : '84px'} 
+            ml={selected === 'price' && !isMobile ? '20px' : ''}
+            flexDir={isMobile ? 'column' :'row'} 
+            fontSize={'20px'} 
+            mb={'100px'}
+            w={isMobile ? '330px' : selected === 'price' ? '463px' : '920px'}
+            h={isMobile ? '200px' : selected === 'price' ? '296px' : '261px'}
+            justifyContent={'center'}
             alignItems={'center'}
-            px={selected === 'price' && !isMobile ? '50px' : ''}
+            borderRadius={'8px'}
+            bgColor={'rgba(233, 236, 251, 0.8)'}
+            backdropFilter={'blur(10px)'}
           >
-            <Flex 
-              opacity={0.1} 
-              backdropFilter={'blur(10px)'}
-              position={'absolute'}
-              w={isMobile ? '330px' : selected === 'price' ? '463px' : '920px'}
-              h={isMobile ? '200px' : '261px'}
-              bgImage={"url('./dune.png')"} 
-              bgPosition={'center; *strikethrough*'}
-              bgSize={selected === 'price' ? 463 : 920 }
-            />
-            <Flex 
-              position={selected === 'price' && !isMobile ? 'absolute' : 'relative'}
-              top={selected === 'price' && !isMobile ? '123px' : ''}
-              left={selected === 'price' && !isMobile ?'85px' : ''}
-              mb={'5px'}
-            >
-              <Image src={DUNE_LOGO} alt={''} width={25} />
-            </Flex>
-            <Flex 
-              mx={selected === 'price' && !isMobile ? '40px' : '10px'} 
-              fontWeight={600} 
-              textAlign={selected === 'price' && !isMobile ? 'left' : 'center'} 
-              opacity={1}
-              ml={selected === 'price' && !isMobile ? '70px' : ''}
-              flexDir={isMobile ? 'column' : 'row'}
+            <Flex
+              bgSize={920}
+              zIndex={1}
+              justifyContent={'center'} 
+              flexDir={isMobile ? 'column' : 'row'}  
               alignItems={'center'}
+              px={selected === 'price' && !isMobile ? '50px' : ''}
             >
-              Dune - Tokamak Network Tokenomics Dashboard
-              <Link 
-                href={'https://dune.com/tokamak-network/tokamak-network-tokenomics-dashboard'}
-                rel="noopener noreferrer" target="_blank"
-                position={selected === 'price' && !isMobile ? 'absolute': 'relative'}
-                top={selected === 'price' && !isMobile ? '146px' : ''}
-                right={selected === 'price' && !isMobile ? '98px': ''}
-                ml={'5px'}
+              <Flex 
+                opacity={0.1} 
+                backdropFilter={'blur(10px)'}
+                position={'absolute'}
+                w={isMobile ? '330px' : selected === 'price' ? '463px' : '920px'}
+                h={isMobile ? '200px' : '261px'}
+                bgImage={"url('./dune.png')"} 
+                bgPosition={'center; *strikethrough*'}
+                bgSize={selected === 'price' ? 463 : 920 }
+              />
+              <Flex 
+                position={selected === 'price' && !isMobile ? 'absolute' : 'relative'}
+                top={selected === 'price' && !isMobile ? '123px' : ''}
+                left={selected === 'price' && !isMobile ?'85px' : ''}
+                mb={'5px'}
               >
-                <Image src={LINK_ICON} alt="" />
-              </Link>
+                <Image src={DUNE_LOGO} alt={''} width={25} />
+              </Flex>
+              <Flex 
+                mx={selected === 'price' && !isMobile ? '40px' : '10px'} 
+                fontWeight={600} 
+                textAlign={selected === 'price' && !isMobile ? 'left' : 'center'} 
+                opacity={1}
+                ml={selected === 'price' && !isMobile ? '70px' : ''}
+                flexDir={isMobile ? 'column' : 'row'}
+                alignItems={'center'}
+              >
+                Dune - Tokamak Network Tokenomics Dashboard
+                <Link 
+                  href={'https://dune.com/tokamak-network/tokamak-network-tokenomics-dashboard'}
+                  rel="noopener noreferrer" target="_blank"
+                  position={selected === 'price' && !isMobile ? 'absolute': 'relative'}
+                  top={selected === 'price' && !isMobile ? '146px' : ''}
+                  right={selected === 'price' && !isMobile ? '98px': ''}
+                  ml={'5px'}
+                >
+                  <Image src={LINK_ICON} alt="" />
+                </Link>
+              </Flex>
+              
             </Flex>
-            
-          </Flex>
-        </Flex>
+          </Flex> : ''
+        }
+        
       </Flex>
       
     </Flex>
