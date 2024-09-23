@@ -71,10 +71,7 @@ function TokamakGNB() {
         title={'DAO'}
         w={'68px'}
         url={'https://dao.tokamak.network/#/'}></Menu>
-      <Menu
-        title={'Launchpad'}
-        w={'110px'}
-        url={'https://tonstarter.tokamak.network/'}></Menu>
+      
     </Flex>
   );
 }

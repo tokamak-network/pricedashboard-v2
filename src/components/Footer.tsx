@@ -51,10 +51,7 @@ export default function Footer() {
         title: 'DAO',
         link: 'https://dao.tokamak.network/#/'
       },
-      {
-        title: 'Launchpad',
-        link: 'https://tonstarter.tokamak.network/'
-      },
+      
       {
         title: 'Block Explorer',
         link: 'https://explorer.titan.tokamak.network/'

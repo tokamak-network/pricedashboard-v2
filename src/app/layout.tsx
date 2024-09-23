@@ -5,6 +5,7 @@ import { RecoilRoot } from "recoil";
 import Entry from "./Entry";
 import Favicon from "./favicon.ico"
 
+
 const HeadMeta = () => {
   return (
     <head>
