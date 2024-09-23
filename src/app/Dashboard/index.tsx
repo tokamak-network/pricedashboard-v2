@@ -65,8 +65,8 @@ export default function Dashboard () {
         w={'100%'}
         minH={'610px'} 
         alignItems={'center'}
-        justifyContent={'start'}
-        flexDir={'column'}
+        justifyContent={selected === 'price' && !isMobile ? 'center' :'start'}
+        flexDir={selected === 'price' && !isMobile ? 'row' : 'column'}
       >
         {
           selected === 'price' ?
@@ -74,12 +74,13 @@ export default function Dashboard () {
           <Supply />
         }
         <Flex 
-          mt={isMobile ? '40px' : '84px'} 
+          mt={isMobile ? '40px' : selected === 'price' ? '100px' : '84px'} 
+          ml={selected === 'price' && !isMobile ? '20px' : ''}
           flexDir={isMobile ? 'column' :'row'} 
           fontSize={'20px'} 
           mb={'100px'}
-          w={isMobile ? '330px' : '920px'}
-          h={isMobile ? '200px' : '261px'}
+          w={isMobile ? '330px' : selected === 'price' ? '463px' : '920px'}
+          h={isMobile ? '200px' : selected === 'price' ? '296px' : '261px'}
           justifyContent={'center'}
           alignItems={'center'}
           borderRadius={'8px'}
@@ -92,28 +93,47 @@ export default function Dashboard () {
             justifyContent={'center'} 
             flexDir={isMobile ? 'column' : 'row'}  
             alignItems={'center'}
-            
+            px={selected === 'price' && !isMobile ? '50px' : ''}
           >
             <Flex 
               opacity={0.1} 
               backdropFilter={'blur(10px)'}
               position={'absolute'}
-              w={isMobile ? '330px' : '920px'}
+              w={isMobile ? '330px' : selected === 'price' ? '463px' : '920px'}
               h={isMobile ? '200px' : '261px'}
               bgImage={"url('./dune.png')"} 
               bgPosition={'center; *strikethrough*'}
-              bgSize={920}
+              bgSize={selected === 'price' ? 463 : 920 }
             />
-            <Image src={DUNE_LOGO} alt={''} width={25} />
-            <Flex mx={'10px'} fontWeight={600} textAlign={'center'} opacity={1}>
-              Dune - Tokamak Network Tokenomics Dashboard
-            </Flex>
-            <Link 
-              href={'https://dune.com/tokamak-network/tokamak-network-tokenomics-dashboard'}
-              rel="noopener noreferrer" target="_blank"
+            <Flex 
+              position={selected === 'price' && !isMobile ? 'absolute' : 'relative'}
+              top={selected === 'price' && !isMobile ? '123px' : ''}
+              left={selected === 'price' && !isMobile ?'85px' : ''}
+              mb={'5px'}
             >
-              <Image src={LINK_ICON} alt="" />
-            </Link>
+              <Image src={DUNE_LOGO} alt={''} width={25} />
+            </Flex>
+            <Flex 
+              mx={selected === 'price' && !isMobile ? '40px' : '10px'} 
+              fontWeight={600} 
+              textAlign={selected === 'price' && !isMobile ? 'left' : 'center'} 
+              opacity={1}
+              ml={selected === 'price' && !isMobile ? '70px' : ''}
+              flexDir={isMobile ? 'column' : 'row'}
+              alignItems={'center'}
+            >
+              Dune - Tokamak Network Tokenomics Dashboard
+              <Link 
+                href={'https://dune.com/tokamak-network/tokamak-network-tokenomics-dashboard'}
+                rel="noopener noreferrer" target="_blank"
+                position={selected === 'price' && !isMobile ? 'absolute': 'relative'}
+                top={selected === 'price' && !isMobile ? '146px' : ''}
+                right={selected === 'price' && !isMobile ? '98px': ''}
+                ml={'5px'}
+              >
+                <Image src={LINK_ICON} alt="" />
+              </Link>
+            </Flex>
             
           </Flex>
         </Flex>
