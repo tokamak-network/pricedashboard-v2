@@ -1,5 +1,6 @@
 "use client";
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RecoilRoot } from "recoil";
 import Entry from "./Entry";
 import Favicon from "./favicon.ico"
@@ -52,16 +53,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // const queryClient = getQueryClient();
+  const queryClient = new QueryClient();
+
   return (
-    <html lang="en">
-      {/* <GoogleAnalyticsScript /> */}
-      <HeadMeta />
-      <body style={{ maxHeight: "100vh", margin: 0, padding: 0 }}>
-        <RecoilRoot>
-          <Entry children={children} />
-        </RecoilRoot>
-      </body>
-    </html>
+    <QueryClientProvider client={queryClient}>
+      <html lang="en">
+        {/* <GoogleAnalyticsScript /> */}
+        <HeadMeta />
+        <body style={{ maxHeight: "100vh", margin: 0, padding: 0 }}>
+          <RecoilRoot>
+            <Entry children={children} />
+          </RecoilRoot>
+        </body>
+      </html>
+    </QueryClientProvider>
   );
 }
