@@ -48,15 +48,7 @@ export default function Header() {
         >
           Buy TON
         </Link>
-        <Link 
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://tokamaknetwork.gitbook.io/home/03-information/buy-tos"
-          textDecor={'none'}
-          color="#1c1c1c"
-        >
-          Buy TOS
-        </Link>
+        
         {/* <Tooltip 
           label={'Coming soon!'} 
           placement={'auto'}

@@ -130,27 +130,7 @@ function MobileHeader() {
                     Buy TON
                   </Flex>
                 </Link>
-                <Link 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://tokamaknetwork.gitbook.io/home/03-information/buy-tos"
-                  textDecor={'none'}
-                  color="#1c1c1c"
-                  onClick={onClose}
-                >
-                  <Flex
-                    fontSize={"20px"}
-                    fontWeight={600}
-                    mb="30px"
-                    textDecor={'none'}
-                    color={"#3e495c"}
-                    cursor={"pointer"}
-                    onMouseEnter={() => setIsHover(0)}
-                    onMouseLeave={() => setIsHover(undefined)}
-                  >
-                    Buy TOS
-                  </Flex>
-                </Link>
+               
                 {/* <Tooltip 
                   label={'Coming soon!'} 
                   placement={'auto'}
