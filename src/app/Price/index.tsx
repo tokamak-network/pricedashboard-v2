@@ -11,7 +11,7 @@ export default function Price () {
   const [isMobile] = useMediaQuery("(max-width: 920px)");
  
   return (
-    <Flex flexDir={'column'} maxW={'450px'} justifyContent={'center'} alignItems={'center'}>
+    <Flex flexDir={'column'} maxW={'450px'} justifyContent={'center'} alignItems={'center'} mt={isMobile ? '' : '-100px'}>
       <Flex flexDir={isMobile ? 'column' : 'row'} justifyContent={'space-between'} w={isMobile ? '100%' : '450px'}>
         <TopContent 
           krw={tonPriceKRW}

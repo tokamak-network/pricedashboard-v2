@@ -63,7 +63,7 @@ export default function Dashboard () {
         bgColor={'#F7F8FD'} 
         // maxW={'920px'} 
         w={'100%'}
-        minH={'810px'} 
+        minH={'610px'} 
         alignItems={'center'}
         justifyContent={!isMobile ? 'center' :'start'}
         flexDir={selected === 'price' && !isMobile ? 'row' : 'column'}
@@ -76,7 +76,7 @@ export default function Dashboard () {
         {
           selected === 'price' ?
           <Flex 
-            mt={isMobile ? '40px' : selected === 'price' ? '100px' : '84px'} 
+            mt={isMobile ? '40px' : selected === 'price' ? '' : '84px'} 
             ml={selected === 'price' && !isMobile ? '20px' : ''}
             flexDir={isMobile ? 'column' :'row'} 
             fontSize={'20px'} 

@@ -17,7 +17,8 @@ function BottomSection () {
       flexDir={'column'}
       alignItems={'center'}
       borderRadius={'10px'}
-      mt={'20px'}
+      mt={isMobile ? '70px' : '20px'}
+      mb={isMobile ? '40px' : '0px'}
     >
       <SectionTitle 
         title={'TON LIQUIDITY MEASURE'}
