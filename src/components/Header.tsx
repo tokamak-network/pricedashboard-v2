@@ -1,18 +1,20 @@
 import { Flex, Link, Text, Tooltip } from "@chakra-ui/react";
 import LOGO from '@/assets/Tokamak_transparent.png'
 import Image from 'next/image'
+import '@fontsource/poppins';
 
 export default function Header() {
   return (
     <Flex
-      w={'90%'}
+      w={'100%'}
+      // maxW={'1440px'}
       // minW={''}
       h={'80px'}
       bg={'#fff'}
       color={'#1c1c1c'}
       fontSize={'16px'}
       fontWeight={600}
-      justifyContent={'start'}
+      justifyContent={'center'}
       // alignItems={'center'}
       flexDir={'row'}
     >
@@ -20,7 +22,7 @@ export default function Header() {
         ml={'11px'}
         justifyContent={'start'}
         alignItems={'center'}
-        w={'49%'}
+        minW={'920px'}
       >
         <Image width={40} src={LOGO} alt="" />
         <Flex
@@ -28,8 +30,18 @@ export default function Header() {
           fontFamily={'Helvetica, sans-serif'}
           fontWeight={'bold'}
           ml={'3px'}
+          flexDir={'row'}
+          alignItems={'center'}
         >
-          Tokamak Network Price Dashboard
+          Tokamak Network 
+          <Flex 
+            ml={'10px'}
+            color={'#2a72e5'}
+            fontWeight={600}
+            fontFamily={'Poppins, sans-serif'}
+          >
+            price dashboard
+          </Flex>
         </Flex>
       </Flex>
       <Flex
@@ -38,16 +50,7 @@ export default function Header() {
         fontSize={'16px'}
         color="#1c1c1c"
       >
-        <Link 
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://tokamaknetwork.gitbook.io/home/03-information/buy-ton"
-          textDecor={'none'}
-          color="#1c1c1c"
-          mr={'40px'}
-        >
-          Buy TON
-        </Link>
+       
         
         {/* <Tooltip 
           label={'Coming soon!'} 

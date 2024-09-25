@@ -28,7 +28,7 @@ function MobileHeader() {
 
   return (
     <Flex
-      h="80px"
+      h="50px"
       alignItems={"center"}
       justifyContent={"space-between"}
       width="90%"
@@ -47,9 +47,9 @@ function MobileHeader() {
           ml={'7px'}
           w={'150px'}
         >
-          Tokamak Network Price Dashboard
+          price Dashboard
         </Flex>
-      </Flex> 
+      {/* </Flex> 
         <Flex
           height={30}
           bg="transparent"
@@ -68,8 +68,8 @@ function MobileHeader() {
           cursor={'pointer'}
         >
           <Image src={Burger_icon} alt={"Burger_icon"} height={30} width={30} />
-        </Flex>
-        <Drawer
+        </Flex> */}
+        {/* <Drawer
           isOpen={isOpen}
           placement="right"
           onClose={onClose}
@@ -130,34 +130,12 @@ function MobileHeader() {
                     Buy TON
                   </Flex>
                 </Link>
-               
-                {/* <Tooltip 
-                  label={'Coming soon!'} 
-                  placement={'auto'}
-                  hasArrow arrowSize={15}
-                  bgColor={'#1C1C1C'}
-                  color={'#fff'}
-                  padding={'5px'}
-                  borderRadius={"3px"}
-                >
-                  <Text
-                    fontSize={"20px"}
-                    fontWeight={600}
-                    mb="30px"
-                    color={"#3e495c"}
-                    cursor={"pointer"}
-                    onMouseEnter={() => setIsHover(0)}
-                    onMouseLeave={() => setIsHover(undefined)}
-                  >
-                    Dune Dashboard
-                  </Text>
-                </Tooltip> */}
               </Flex>
             </DrawerBody>
           </DrawerContent>
-        </Drawer>
+        </Drawer> */}
       </Flex>
-    // </Flex>
+    </Flex>
   );
 }
 

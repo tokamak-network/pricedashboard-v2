@@ -99,15 +99,16 @@ export default function Footer() {
   return (
     <Flex
       flexDir={'column'}
-      w={isMobile ? '100%' : '90%'}
+      w={isMobile ? '100%' : '100%'}
       mx={isMobile ? '' : '100px'}
-      alignItems={isMobile ? 'center' : ''}
+      alignItems={isMobile ? 'center' : 'center'}
       mt={'50px'}
     >
       <SimpleGrid
         flexDir={'row'}
         justifyContent={isMobile? 'center' : 'space-between'}
-        minW={isMobile ? '165px' : '100%'}
+        minW={isMobile ? '165px' : '1340px'}
+        maxW={isMobile ? '' : '1340px'}
         // templateColumns={isMobile? 'repeat(2, 1fr)' : 'repeat(6, 1fr)'}
         minChildWidth={'150px'}
         rowGap={isMobile? 20 : 0}
@@ -145,13 +146,14 @@ export default function Footer() {
           })
         }
       </SimpleGrid>
-      <Flex mt={'60px'} mb={'45px'} h={'1px'} bgColor={'#dfe4ee'} minW={'100%'}/>
+      <Flex mt={'60px'} mb={'45px'} h={'1px'} bgColor={'#dfe4ee'} w={isMobile ? '' : '1340px'}/>
       <Flex 
         flexDir={'row'}
         fontSize={'16px'}
         color={'#999'}
         fontWeight={'normal'}
         mb={'31px'}
+        w={isMobile ? '' : '1340px'}
       >
         <Flex>
           Copyright © 2024 

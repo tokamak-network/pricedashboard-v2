@@ -1,8 +1,8 @@
-import { Flex } from "@chakra-ui/layout";
+import { Flex, Text } from "@chakra-ui/layout";
 import { useState } from "react";
 import Price from "../Price";
 import Supply from "../Supply";
-import { Link, useMediaQuery } from "@chakra-ui/react";
+import { Button, Link, useMediaQuery } from "@chakra-ui/react";
 import DUNE_LOGO from '@/assets/dune-logo.png'
 import DUNE from '@/assets/dune.png'
 import Image from "next/image";
@@ -25,45 +25,72 @@ export default function Dashboard () {
         flexDir={'row'}
         fontSize={isMobile ? '24px' : '30px'}
         fontWeight={600}
-        justifyContent={isMobile ? 'center' : 'start'}
+        justifyContent={isMobile ? 'space-between' : 'space-between'}
         alignItems={'center'}
         bgColor={'#fff'}
-        h={'120px'}
+        mx={isMobile ? '20px' : ''}
+        h={isMobile ? '80px' : '120px'}
         w={isMobile ? '100%' : '920px'}
       >
-        <Flex
-          color={selected === 'price' ? '#333' : '#B2C1D2'}
-          cursor={'pointer'}
-          onClick={() => setSelected('price')}
-          _hover={{
-            color: '#333'
-          }}
-        >
-          PRICE
+        <Flex mt={'20px'} ml={isMobile ? '20px' : ''}>
+          <Flex
+            color={selected === 'price' ? '#333' : '#B2C1D2'}
+            cursor={'pointer'}
+            onClick={() => setSelected('price')}
+            _hover={{
+              color: '#333'
+            }}
+            textDecor={selected === 'supply' ? '' : 'underline'}
+            textDecorationColor={'#2a72e5'}
+          >
+            PRICE
+          </Flex>
+          <Flex 
+            width={'2px'}
+            height={'54px'}
+            // bgColor={'#007aff'}
+            mx={isMobile ? '8px' : '12px'}
+          />
+          <Flex
+            color={selected === 'supply' ? '#333' : '#B2C1D2'}
+            cursor={'pointer'}
+            onClick={() => setSelected('supply')}
+            _hover={{
+              color: '#333'
+            }}
+            textDecor={selected === 'supply' ? 'underline' : ''}
+            textDecorationColor={'#2a72e5'}
+            // textDecorationStyle={''}
+          >
+            SUPPLY
+          </Flex>
         </Flex>
-        <Flex 
-          width={'2px'}
-          height={'54px'}
+        <Button 
+          w={isMobile ? '83px' : '116px'}
+          h={isMobile ? '33px' : '44px'}
+          borderRadius={'4px'}
           bgColor={'#007aff'}
-          mx={'12px'}
-        />
-        <Flex
-          color={selected === 'supply' ? '#333' : '#B2C1D2'}
-          cursor={'pointer'}
-          onClick={() => setSelected('supply')}
-          _hover={{
-            color: '#333'
-          }}
+          border={'none'}
+          fontSize={isMobile ? '12px' : '16px'}
+          mr={isMobile ? '20px' : ''}
         >
-          SUPPLY
-        </Flex>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://tokamaknetwork.gitbook.io/home/03-information/buy-ton"
+            color="#fff"
+            textDecor={'none'}
+          >
+            Buy TON
+          </Link>
+        </Button>
       </Flex>
       <Flex 
-        pt={'30px'} 
+        // pt={'30px'} 
         bgColor={'#F7F8FD'} 
         // maxW={'920px'} 
         w={'100%'}
-        minH={'610px'} 
+        h={isMobile ? '655px' : '577px'} 
         alignItems={'center'}
         justifyContent={!isMobile ? 'center' :'start'}
         flexDir={selected === 'price' && !isMobile ? 'row' : 'column'}
@@ -76,13 +103,13 @@ export default function Dashboard () {
         {
           selected === 'price' ?
           <Flex 
-            mt={isMobile ? '40px' : selected === 'price' ? '' : '84px'} 
-            ml={selected === 'price' && !isMobile ? '20px' : ''}
+            mt={isMobile ? '10px' : ''} 
+            ml={!isMobile ? '20px' : ''}
             flexDir={isMobile ? 'column' :'row'} 
             fontSize={'20px'} 
             mb={'100px'}
             w={isMobile ? '330px' : selected === 'price' ? '463px' : '920px'}
-            h={isMobile ? '200px' : selected === 'price' ? '296px' : '261px'}
+            h={isMobile ? '250px' : selected === 'price' ? '296px' : '261px'}
             justifyContent={'center'}
             alignItems={'center'}
             borderRadius={'8px'}
@@ -90,22 +117,23 @@ export default function Dashboard () {
             backdropFilter={'blur(10px)'}
           >
             <Flex
-              bgSize={920}
+              bgSize={isMobile ? 330 : 920}
               zIndex={1}
               justifyContent={'center'} 
               flexDir={isMobile ? 'column' : 'row'}  
               alignItems={'center'}
+              h={'200px'}
               px={selected === 'price' && !isMobile ? '50px' : ''}
             >
               <Flex 
                 opacity={0.1} 
                 backdropFilter={'blur(10px)'}
                 position={'absolute'}
-                w={isMobile ? '330px' : selected === 'price' ? '463px' : '920px'}
+                w={isMobile ? '330px' : '463px'}
                 h={isMobile ? '200px' : '261px'}
                 bgImage={"url('./dune.png')"} 
                 bgPosition={'center; *strikethrough*'}
-                bgSize={selected === 'price' ? 463 : 920 }
+                bgSize={isMobile ? 330 : 463 }
               />
               <Flex 
                 position={selected === 'price' && !isMobile ? 'absolute' : 'relative'}
