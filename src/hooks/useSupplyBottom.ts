@@ -16,19 +16,19 @@ export function useSupplyBottom () {
   const [circulSupply, setCirculSupply] = useState<SupplyValueProps[]>([
     {
       title: "C1",
-      tooltip: "A supply measure that indicates TON that is immediately accessible for conversion to cash without any restrictions from staking, vesting, or DAO constraints. C1=  TON Total Supply - TON locked in vesting - TON locked in DAO Vault - TON Staked ",
+      tooltip: "A supply metric representing the TON that is immediately available for conversion to cash. Please note that TON from TONStarter mining (which has ended), TON in vesting (now complete), and TON locked indefinitely in the DAO Vault are excluded from the C1 calculation.",
       value: 0,
       dollor: 0,
     },
     {
       title: "C2",
-      tooltip: "A supply measure considering short term locked TON(< 3 months).This supply metric considers staked (excluding TONStarter Staking) and vested TON, excluding DAO-locked TON, which remains locked indefinitely. Formula = C1+ TON Staked + TON Locked in Vesting - TONStarter staked TON",
+      tooltip: "A supply metric focused on TON locked for the short term (less than 3 months), which considers staked TON.",
       value: 0,
       dollor: 0,
     },
     {
       title: "C3",
-      tooltip: "A supply measure considering a relatively long term locked TON (<1 year)  than C2. On 15 July 2024, both C3 and C2 becomes equal since it marks the end of TONStarter staking. Formula = C2 + TONStarter staked TON",
+      tooltip: "A supply measure considering a relatively long term (greater than 1 year)  locked TON. ",
       value: 0,
       dollor: 0,
     },

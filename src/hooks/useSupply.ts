@@ -25,7 +25,7 @@ export function useSupply () {
   const [supplyContent, setSupplyContent] = useState<SupplyValueProps[]>([
     {
       content: "Total Supply",
-      tooltip: "The cumulative TON generated until the present ethereum block, factoring in both burnt TON and unminted TON due to a seigniorage adjustment. Each block produces 3.92 TON as seigniorage.",
+      tooltip: "3.92 TON is generated per block, contributing to the overall supply. The total supply also reflects both the TON that is burned and the unminted TON resulting from seigniorage adjustments.",
       value: "- ",
       link: "https://etherscan.io/address/0x0b55a0f463b6defb81c6063973763951712d0e5f#readProxyContract",
       span: '†'
@@ -80,6 +80,9 @@ export function useSupply () {
       const circulation = await getCirculationSupply();
       const tvl = await getTVL();
       const supply = await getSupply();
+
+      console.log(circulatedSupply, tonPriceUSD)
+
 
       setSupplyContent([
         {
