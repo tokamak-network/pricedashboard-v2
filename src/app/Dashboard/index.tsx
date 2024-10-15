@@ -109,7 +109,7 @@ export default function Dashboard () {
             fontSize={'20px'} 
             mb={'100px'}
             w={isMobile ? '330px' : selected === 'price' ? '463px' : '920px'}
-            h={isMobile ? '250px' : selected === 'price' ? '296px' : '261px'}
+            h={isMobile ? '250px' : selected === 'price' ? '368px' : '261px'}
             justifyContent={'center'}
             alignItems={'center'}
             borderRadius={'8px'}
@@ -137,7 +137,7 @@ export default function Dashboard () {
               />
               <Flex 
                 position={selected === 'price' && !isMobile ? 'absolute' : 'relative'}
-                top={selected === 'price' && !isMobile ? '123px' : ''}
+                top={selected === 'price' && !isMobile ? '158px' : ''}
                 left={selected === 'price' && !isMobile ?'85px' : ''}
                 mb={'5px'}
               >
@@ -157,7 +157,7 @@ export default function Dashboard () {
                   href={'https://dune.com/tokamak-network/tokamak-network-tokenomics-dashboard'}
                   rel="noopener noreferrer" target="_blank"
                   position={selected === 'price' && !isMobile ? 'absolute': 'relative'}
-                  top={selected === 'price' && !isMobile ? '146px' : ''}
+                  top={selected === 'price' && !isMobile ? '183px' : ''}
                   right={selected === 'price' && !isMobile ? '98px': ''}
                   ml={'5px'}
                 >

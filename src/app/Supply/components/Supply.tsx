@@ -1,5 +1,5 @@
 import { Flex, Link, useMediaQuery } from "@chakra-ui/react";
-import TopContent from './TopContent';
+import SupplyTopContent from './TopContent';
 import { useSupply } from '../../../hooks/useSupply';
 
 function Supply () {
@@ -17,7 +17,7 @@ function Supply () {
         {
           supplyContent.map((content: any, index: number) => {
             return (
-              <TopContent {...content} key={index}/>
+              <SupplyTopContent {...content} mb={'30px'} key={index}/>
             )
           })
         }

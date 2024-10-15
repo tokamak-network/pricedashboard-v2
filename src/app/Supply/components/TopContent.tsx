@@ -7,7 +7,7 @@ import Link from "next/link";
 import BasicTooltip from "@/components/Tooltip";
 import { commafyWithUndefined } from '../../../utils/commify';
 
-function TopContent (props: {
+function SupplyTopContent (props: {
   content: string,
   tooltip: string,
   tooltip2?: string,
@@ -16,15 +16,16 @@ function TopContent (props: {
   type?: string
   span?: string
   types?: string
+  mb?: string
 }) {
-  const { content, tooltip, tooltip2, value, link, type, span, types } = props
+  const { content, tooltip, tooltip2, value, link, type, span, types, mb } = props
   const [isMobile] = useMediaQuery("(max-width: 920px)");
   return (
     <Flex
       flexDir={'row'}
       w={isMobile ? '90%' : '396px'}
       h={'16px'}
-      mb={isMobile ? '27px' : '14px'}
+      mb={mb ? mb : isMobile ? '27px' : '14px'}
       justifyContent={'space-between'}
       fontSize={'14px'}
       px={'15px'}
@@ -88,4 +89,4 @@ function TopContent (props: {
   )
 }
 
-export default TopContent
+export default SupplyTopContent

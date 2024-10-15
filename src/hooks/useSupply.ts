@@ -43,27 +43,6 @@ export function useSupply () {
       link: "",
     },
     {
-      content: "Market Cap",
-      tooltip: "",
-      value: "",
-      link: "",
-      type: 'usd'
-    },
-    {
-      content: "FDV",
-      tooltip: "",
-      value: "",
-      link: "",
-      type: "usd"
-    },
-    {
-      content: "Uniswap TVL",
-      tooltip: "Pools considered for the calculation:  DOC-TOS, TOS-ETH, ETH-WTON, TOS-WTON, TOS-AURA, DOC-ETH, TOS-LYDA",
-      value: "",
-      link: "",
-      type: "usd"
-    },
-    {
       content: "Burned",
       tooltip: "The total TON that has been burned to date.",
       value: '',
@@ -76,13 +55,10 @@ export function useSupply () {
   useEffect(() => {
     async function fetch() {
       const totalSupply = await getTotalSupply();
-      const circulatedSupply = await getCirculateSupply();
+      // const circulatedSupply = await getCirculateSupply();
       const circulation = await getCirculationSupply();
-      const tvl = await getTVL();
+      // const tvl = await getTVL();
       const supply = await getSupply();
-
-      console.log(circulatedSupply, tonPriceUSD)
-
 
       setSupplyContent([
         {
@@ -106,28 +82,6 @@ export function useSupply () {
           tooltip: "Circulating Supply (Upbit Standard) = Total Supply - DAO Vault - Vested",
           value: circulation.totalCirculationSupply,
           link: "",
-        },
-        {
-          content: "Market Cap",
-          tooltip: "Market Cap = Circulating Supply * Price Per TON",
-          value: +circulatedSupply * tonPriceUSD,
-          link: "",
-          type: 'usd'
-        },
-        {
-          content: "FDV",
-          tooltip: "Fully Diluted Valuation = Total Supply * Price per TON",
-          value: +totalSupply * tonPriceUSD,
-          link: "",
-          type: "usd"
-        },
-        {
-          content: "Uniswap TVL",
-          tooltip: "Uniswap V3 Pools considered for the calculation:  ",
-          value: tvl,
-          link: "",
-          type: "usd",
-          types: "uniswap"
         },
         {
           content: "Burned",

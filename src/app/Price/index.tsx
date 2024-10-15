@@ -1,13 +1,11 @@
 import { Flex } from "@chakra-ui/layout";
 import { useMediaQuery } from "@chakra-ui/react";
 import { useTONPrice } from '../../hooks/useTONPrice';
-import { useTOSPrice } from '../../hooks/useTOSPrice';
 import BottomContent from "./BottomContent";
 import TopContent from "./TopContent";
 
 export default function Price () {
   const { tonPriceKRW, tonPriceUSD, highPrice, lowPrice, openingPrice, closingPrice, krwPrice } = useTONPrice();
-  const { tosPriceKRW, tosPriceUSD } = useTOSPrice()
   const [isMobile] = useMediaQuery("(max-width: 920px)");
  
   return (
