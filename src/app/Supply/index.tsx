@@ -12,6 +12,8 @@ export default function Supply () {
       w={isMobile ? '100%' : '920px'} 
       justifyContent={'center'} 
       alignItems={'center'}
+      // h={isMobile ? '100%' : '' }
+      // mb={isMobile ? '20px' : ''}
     >
       <Flex 
         flexDir={isMobile ? 'column' :'row'} 

@@ -90,7 +90,7 @@ export default function Dashboard () {
         bgColor={'#F7F8FD'} 
         // maxW={'920px'} 
         w={'100%'}
-        h={isMobile ? '655px' : '577px'} 
+        h={isMobile ? '' : '577px'} 
         alignItems={'center'}
         justifyContent={!isMobile ? 'center' :'start'}
         flexDir={selected === 'price' && !isMobile ? 'row' : 'column'}
