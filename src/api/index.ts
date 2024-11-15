@@ -19,8 +19,7 @@ export async function getCirculateSupply() {
 }
 
 export async function getTotalStaked() {
-  const subgraphURL =
-    "https://api.studio.thegraph.com/query/77344/staking-v1-subgraph/version/latest";
+  const subgraphURL = process.env.NEXT_PUBLIC_SUBGRAPH;
   const query = `
   {
   factories(first: 5) {
@@ -32,7 +31,7 @@ export async function getTotalStaked() {
 }
 `;
 
-  const response = await fetch(subgraphURL, {
+  const response = await fetch(subgraphURL ? subgraphURL : '', {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -44,7 +43,6 @@ export async function getTotalStaked() {
   const stakeTotal = data?.data?.factories[0].totalStaked;
   const totalStake = parseFloat(stakeTotal) / Math.pow(10, 27);
   return totalStake;
-
   // return (await api.get("/staking/current"))?.data;
 }
 

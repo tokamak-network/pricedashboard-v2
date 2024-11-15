@@ -50,7 +50,7 @@ export function useBurnt () {
       // const stakedData = await getStakedData();
       const totalStaked = await getTotalStaked();
       const supply = await getSupply();
-      
+
       setBurntContent([
         {
           content: "DAO Vault",

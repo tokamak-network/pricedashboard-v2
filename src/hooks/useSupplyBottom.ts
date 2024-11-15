@@ -50,14 +50,14 @@ export function useSupplyBottom () {
         },
         {
           title: "C2",
-          tooltip: "C2 = C1 + Staked + Vested - TONStarter Mining",
+          tooltip: "C2 = C1 + Staked TON",
           tooltip2: "A supply metric focused on TON locked for the short term (less than 3 months), which considers staked TON.",
           value: C1 + C2,
           dollor: (C1 + C2) * tonPriceUSD,
         },
         {
           title: "C3",
-          tooltip: "C3 = C2 + TONStarter mining",
+          tooltip: "C3 = C2",
           tooltip2: "A supply measure considering a relatively long term (greater than 1 year)  locked TON.",
           value: circulation.totalCirculationSupply,
           dollor: (circulation.totalCirculationSupply) * tonPriceUSD,
