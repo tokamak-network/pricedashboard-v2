@@ -59,8 +59,10 @@ export function useSupplyBottom () {
           title: "C3",
           tooltip: "C3 = C2",
           tooltip2: "A supply measure considering a relatively long term (greater than 1 year)  locked TON.",
-          value: circulation.totalCirculationSupply,
-          dollor: (circulation.totalCirculationSupply) * tonPriceUSD,
+          value: C1 + C2,
+          dollor: (C1 + C2) * tonPriceUSD,
+          // value: circulation.totalCirculationSupply,
+          // dollor: (circulation.totalCirculationSupply) * tonPriceUSD,
         },
       ])
     }
