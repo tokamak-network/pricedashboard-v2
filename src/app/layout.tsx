@@ -29,13 +29,13 @@ const HeadMeta = () => {
       <meta name="keywords" content="tokamak price dashboard supply" />
       
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-PDHHY8ESKP"></script>
-      <script>
+      {/* <script>
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-PDHHY8ESKP');`}
-      </script>
+      </script> */}
     </head>
   );
 };
